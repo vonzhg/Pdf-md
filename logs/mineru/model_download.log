@@ -1,0 +1,4 @@
+2026-05-21 14:15:40.881 | INFO     | mineru.cli.models_download:download_models:167 - Downloading vlm model from huggingface...
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files:   8%|▊         | 1/13 [00:00<00:02,  5.87it/s]Fetching 13 files:  62%|██████▏   | 8/13 [00:07<00:04,  1.08it/s]Fetching 13 files: 100%|██████████| 13/13 [00:07<00:00,  1.81it/s]
+2026-05-21 14:15:48.192 | INFO     | mineru.cli.models_download:download_vlm_models:88 - VLM models downloaded successfully to: /u/zfeng2/.cache/huggingface/hub/models--opendatalab--MinerU2.5-Pro-2604-1.2B/snapshots/d3f5e08d073c21466bbabe21c71bb1e9c2e595da
+2026-05-21 14:15:48.310 | INFO     | mineru.cli.models_download:configure_model:63 - The configuration file has been successfully configured, the path is: /u/zfeng2/mineru.json

@@ -1,0 +1,1498 @@
+=== olmOCR env setup ===
+Env path:    /projects/bepc/zfeng2/envs/olmocr_env
+HF cache:    /projects/bepc/zfeng2/hf_cache
+CUDA wheels: cu128
+Node:        dt-login01.delta.ncsa.illinois.edu
+
+--- nvidia-smi ---
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+
+Creating conda env at /projects/bepc/zfeng2/envs/olmocr_env (Python 3.11)...
+Retrieving notices: - done
+Channels:
+ - conda-forge
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+    current version: 25.7.0
+    latest version: 26.3.2
+
+Please update conda by running
+
+    $ conda update -n base -c conda-forge conda
+
+
+
+## Package Plan ##
+
+  environment location: /projects/bepc/zfeng2/envs/olmocr_env
+
+  added / updated specs:
+    - pip
+    - python=3.11
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    ca-certificates-2026.4.22  |       hbd8a1cb_0         128 KB  conda-forge
+    libexpat-2.8.0             |       hecca717_0          75 KB  conda-forge
+    libsqlite-3.53.1           |       h0c1763c_0         933 KB  conda-forge
+    ncurses-6.6                |       hdb14827_0         897 KB  conda-forge
+    packaging-26.2             |     pyhc364b38_0          89 KB  conda-forge
+    pip-26.1.1                 |     pyh8b19718_0         1.1 MB  conda-forge
+    wheel-0.47.0               |     pyhd8ed1ab_0          33 KB  conda-forge
+    ------------------------------------------------------------
+                                           Total:         3.3 MB
+
+The following NEW packages will be INSTALLED:
+
+  _openmp_mutex      conda-forge/linux-64::_openmp_mutex-4.5-20_gnu 
+  bzip2              conda-forge/linux-64::bzip2-1.0.8-hda65f42_9 
+  ca-certificates    conda-forge/noarch::ca-certificates-2026.4.22-hbd8a1cb_0 
+  ld_impl_linux-64   conda-forge/linux-64::ld_impl_linux-64-2.45.1-default_hbd61a6d_102 
+  libexpat           conda-forge/linux-64::libexpat-2.8.0-hecca717_0 
+  libffi             conda-forge/linux-64::libffi-3.5.2-h3435931_0 
+  libgcc             conda-forge/linux-64::libgcc-15.2.0-he0feb66_18 
+  libgcc-ng          conda-forge/linux-64::libgcc-ng-15.2.0-h69a702a_18 
+  libgomp            conda-forge/linux-64::libgomp-15.2.0-he0feb66_18 
+  liblzma            conda-forge/linux-64::liblzma-5.8.3-hb03c661_0 
+  libnsl             conda-forge/linux-64::libnsl-2.0.1-hb9d3cd8_1 
+  libsqlite          conda-forge/linux-64::libsqlite-3.53.1-h0c1763c_0 
+  libuuid            conda-forge/linux-64::libuuid-2.42-h5347b49_0 
+  libxcrypt          conda-forge/linux-64::libxcrypt-4.4.36-hd590300_1 
+  libzlib            conda-forge/linux-64::libzlib-1.3.2-h25fd6f3_2 
+  ncurses            conda-forge/linux-64::ncurses-6.6-hdb14827_0 
+  openssl            conda-forge/linux-64::openssl-3.6.2-h35e630c_0 
+  packaging          conda-forge/noarch::packaging-26.2-pyhc364b38_0 
+  pip                conda-forge/noarch::pip-26.1.1-pyh8b19718_0 
+  python             conda-forge/linux-64::python-3.11.15-hd63d673_0_cpython 
+  readline           conda-forge/linux-64::readline-8.3-h853b02a_0 
+  setuptools         conda-forge/noarch::setuptools-82.0.1-pyh332efcf_0 
+  tk                 conda-forge/linux-64::tk-8.6.13-noxft_h366c992_103 
+  tzdata             conda-forge/noarch::tzdata-2025c-hc9c84f9_1 
+  wheel              conda-forge/noarch::wheel-0.47.0-pyhd8ed1ab_0 
+  zstd               conda-forge/linux-64::zstd-1.5.7-hb78ec9c_6 
+
+
+
+Downloading and Extracting Packages: ...working...pip-26.1.1           | 1.1 MB    |            |   0% 
+libsqlite-3.53.1     | 933 KB    |            |   0% [A
+
+ncurses-6.6          | 897 KB    |            |   0% [A[A
+
+
+ca-certificates-2026 | 128 KB    |            |   0% [A[A[A
+
+
+
+packaging-26.2       | 89 KB     |            |   0% [A[A[A[A
+
+
+
+
+libexpat-2.8.0       | 75 KB     |            |   0% [A[A[A[A[A
+
+
+
+
+
+wheel-0.47.0         | 33 KB     |            |   0% [A[A[A[A[A[A
+
+
+ca-certificates-2026 | 128 KB    | ########## | 100% [A[A[A
+
+
+
+packaging-26.2       | 89 KB     | ########## | 100% [A[A[A[A
+
+ncurses-6.6          | 897 KB    | ########## | 100% [A[Apip-26.1.1           | 1.1 MB    | ##3        |  23% 
+
+
+
+
+libexpat-2.8.0       | 75 KB     | ########## | 100% [A[A[A[A[A
+
+
+
+
+
+wheel-0.47.0         | 33 KB     | ####8      |  49% [A[A[A[A[A[A
+libsqlite-3.53.1     | 933 KB    | ########## | 100% [A
+libsqlite-3.53.1     | 933 KB    | ########## | 100% [Apip-26.1.1           | 1.1 MB    | ########## | 100% 
+
+
+
+
+
+wheel-0.47.0         | 33 KB     | ########## | 100% [A[A[A[A[A[A
+
+
+ca-certificates-2026 | 128 KB    | ########## | 100% [A[A[A
+
+
+ca-certificates-2026 | 128 KB    | ########## | 100% [A[A[A
+
+
+
+packaging-26.2       | 89 KB     | ########## | 100% [A[A[A[A
+
+
+
+
+libexpat-2.8.0       | 75 KB     | ########## | 100% [A[A[A[A[A
+
+
+
+packaging-26.2       | 89 KB     | ########## | 100% [A[A[A[A
+
+
+
+
+libexpat-2.8.0       | 75 KB     | ########## | 100% [A[A[A[A[A
+libsqlite-3.53.1     | 933 KB    | ########## | 100% [A
+
+
+
+
+
+wheel-0.47.0         | 33 KB     | ########## | 100% [A[A[A[A[A[A
+
+
+
+
+
+wheel-0.47.0         | 33 KB     | ########## | 100% [A[A[A[A[A[Apip-26.1.1           | 1.1 MB    | ########## | 100% pip-26.1.1           | 1.1 MB    | ########## | 100% 
+
+ncurses-6.6          | 897 KB    | ########## | 100% [A[A
+
+ncurses-6.6          | 897 KB    | ########## | 100% [A[A                                                     
+                                                     [A
+
+                                                     [A[A
+
+
+                                                     [A[A[A
+
+
+
+                                                     [A[A[A[A
+
+
+
+
+                                                     [A[A[A[A[A
+
+
+
+
+
+                                                     [A[A[A[A[A[A done
+Preparing transaction: | / - \ | / - \ | / - \ | / - \ | / done
+Verifying transaction: \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | done
+Executing transaction: - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / done
+#
+# To activate this environment, use
+#
+#     $ conda activate /projects/bepc/zfeng2/envs/olmocr_env
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+
+Installing system deps via conda-forge (poppler, fonts)...
+Channels:
+ - conda-forge
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+    current version: 25.7.0
+    latest version: 26.3.2
+
+Please update conda by running
+
+    $ conda update -n base -c conda-forge conda
+
+
+
+## Package Plan ##
+
+  environment location: /projects/bepc/zfeng2/envs/olmocr_env
+
+  added / updated specs:
+    - fonts-conda-ecosystem
+    - poppler
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    c-ares-1.34.6              |       hb03c661_0         203 KB  conda-forge
+    fonts-conda-ecosystem-1    |                0           4 KB  conda-forge
+    fonts-conda-forge-1        |       hc364b38_1           4 KB  conda-forge
+    lcms2-2.19.1               |       h0c24ade_0         245 KB  conda-forge
+    libcurl-8.20.0             |       hcf29cc6_0         458 KB  conda-forge
+    libegl-1.7.0               |       ha4b6fd6_2          44 KB  conda-forge
+    libfreetype-2.14.3         |       ha770c72_0           8 KB  conda-forge
+    libglib-2.88.1             |       h0d30a3d_1         4.5 MB  conda-forge
+    libnghttp2-1.68.1          |       h877daf1_0         648 KB  conda-forge
+    poppler-26.02.0            |       hfdef1ce_3         1.9 MB  conda-forge
+    poppler-data-0.4.12        |       hd8ed1ab_0         2.2 MB  conda-forge
+    pthread-stubs-0.4          |    hb9d3cd8_1002           8 KB  conda-forge
+    xorg-libxi-1.8.2           |       hb9d3cd8_0          46 KB  conda-forge
+    xorg-libxscrnsaver-1.2.4   |       hb9d3cd8_0          14 KB  conda-forge
+    xorg-libxtst-1.2.5         |       hb9d3cd8_3          32 KB  conda-forge
+    ------------------------------------------------------------
+                                           Total:        10.4 MB
+
+The following NEW packages will be INSTALLED:
+
+  c-ares             conda-forge/linux-64::c-ares-1.34.6-hb03c661_0 
+  cairo              conda-forge/linux-64::cairo-1.18.4-he90730b_1 
+  font-ttf-dejavu-s~ conda-forge/noarch::font-ttf-dejavu-sans-mono-2.37-hab24e00_0 
+  font-ttf-inconsol~ conda-forge/noarch::font-ttf-inconsolata-3.000-h77eed37_0 
+  font-ttf-source-c~ conda-forge/noarch::font-ttf-source-code-pro-2.038-h77eed37_0 
+  font-ttf-ubuntu    conda-forge/noarch::font-ttf-ubuntu-0.83-h77eed37_3 
+  fontconfig         conda-forge/linux-64::fontconfig-2.17.1-h27c8c51_0 
+  fonts-conda-ecosy~ conda-forge/noarch::fonts-conda-ecosystem-1-0 
+  fonts-conda-forge  conda-forge/noarch::fonts-conda-forge-1-hc364b38_1 
+  icu                conda-forge/linux-64::icu-78.3-h33c6efd_0 
+  keyutils           conda-forge/linux-64::keyutils-1.6.3-hb9d3cd8_0 
+  krb5               conda-forge/linux-64::krb5-1.22.2-ha1258a1_0 
+  lcms2              conda-forge/linux-64::lcms2-2.19.1-h0c24ade_0 
+  lerc               conda-forge/linux-64::lerc-4.1.0-hdb68285_0 
+  libcurl            conda-forge/linux-64::libcurl-8.20.0-hcf29cc6_0 
+  libdeflate         conda-forge/linux-64::libdeflate-1.25-h17f619e_0 
+  libedit            conda-forge/linux-64::libedit-3.1.20250104-pl5321h7949ede_0 
+  libegl             conda-forge/linux-64::libegl-1.7.0-ha4b6fd6_2 
+  libev              conda-forge/linux-64::libev-4.33-hd590300_2 
+  libfreetype        conda-forge/linux-64::libfreetype-2.14.3-ha770c72_0 
+  libfreetype6       conda-forge/linux-64::libfreetype6-2.14.3-h73754d4_0 
+  libgl              conda-forge/linux-64::libgl-1.7.0-ha4b6fd6_2 
+  libglib            conda-forge/linux-64::libglib-2.88.1-h0d30a3d_1 
+  libglvnd           conda-forge/linux-64::libglvnd-1.7.0-ha4b6fd6_2 
+  libglx             conda-forge/linux-64::libglx-1.7.0-ha4b6fd6_2 
+  libiconv           conda-forge/linux-64::libiconv-1.18-h3b78370_2 
+  libjpeg-turbo      conda-forge/linux-64::libjpeg-turbo-3.1.4.1-hb03c661_0 
+  libnghttp2         conda-forge/linux-64::libnghttp2-1.68.1-h877daf1_0 
+  libpng             conda-forge/linux-64::libpng-1.6.58-h421ea60_0 
+  libssh2            conda-forge/linux-64::libssh2-1.11.1-hcf80075_0 
+  libstdcxx          conda-forge/linux-64::libstdcxx-15.2.0-h934c35e_18 
+  libtiff            conda-forge/linux-64::libtiff-4.7.1-h9d88235_1 
+  libwebp-base       conda-forge/linux-64::libwebp-base-1.6.0-hd42ef1d_0 
+  libxcb             conda-forge/linux-64::libxcb-1.17.0-h8a09558_0 
+  nspr               conda-forge/linux-64::nspr-4.38-h29cc59b_0 
+  nss                conda-forge/linux-64::nss-3.118-h445c969_0 
+  openjpeg           conda-forge/linux-64::openjpeg-2.5.4-h55fea9a_0 
+  pcre2              conda-forge/linux-64::pcre2-10.47-haa7fec5_0 
+  pixman             conda-forge/linux-64::pixman-0.46.4-h54a6638_1 
+  poppler            conda-forge/linux-64::poppler-26.02.0-hfdef1ce_3 
+  poppler-data       conda-forge/noarch::poppler-data-0.4.12-hd8ed1ab_0 
+  pthread-stubs      conda-forge/linux-64::pthread-stubs-0.4-hb9d3cd8_1002 
+  xorg-libice        conda-forge/linux-64::xorg-libice-1.1.2-hb9d3cd8_0 
+  xorg-libsm         conda-forge/linux-64::xorg-libsm-1.2.6-he73a12e_0 
+  xorg-libx11        conda-forge/linux-64::xorg-libx11-1.8.13-he1eb515_0 
+  xorg-libxau        conda-forge/linux-64::xorg-libxau-1.0.12-hb03c661_1 
+  xorg-libxdmcp      conda-forge/linux-64::xorg-libxdmcp-1.1.5-hb03c661_1 
+  xorg-libxext       conda-forge/linux-64::xorg-libxext-1.3.7-hb03c661_0 
+  xorg-libxfixes     conda-forge/linux-64::xorg-libxfixes-6.0.2-hb03c661_0 
+  xorg-libxi         conda-forge/linux-64::xorg-libxi-1.8.2-hb9d3cd8_0 
+  xorg-libxrender    conda-forge/linux-64::xorg-libxrender-0.9.12-hb9d3cd8_0 
+  xorg-libxscrnsaver conda-forge/linux-64::xorg-libxscrnsaver-1.2.4-hb9d3cd8_0 
+  xorg-libxtst       conda-forge/linux-64::xorg-libxtst-1.2.5-hb9d3cd8_3 
+
+
+
+Downloading and Extracting Packages: ...working...libglib-2.88.1       | 4.5 MB    |            |   0% 
+poppler-data-0.4.12  | 2.2 MB    |            |   0% [A
+
+poppler-26.02.0      | 1.9 MB    |            |   0% [A[A
+
+
+libnghttp2-1.68.1    | 648 KB    |            |   0% [A[A[A
+
+
+
+libcurl-8.20.0       | 458 KB    |            |   0% [A[A[A[A
+
+
+
+
+lcms2-2.19.1         | 245 KB    |            |   0% [A[A[A[A[A
+
+
+
+
+
+c-ares-1.34.6        | 203 KB    |            |   0% [A[A[A[A[A[A
+
+
+
+
+
+
+xorg-libxi-1.8.2     | 46 KB     |            |   0% [A[A[A[A[A[A[A
+
+
+
+
+
+
+
+libegl-1.7.0         | 44 KB     |            |   0% [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+xorg-libxtst-1.2.5   | 32 KB     |            |   0% [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+xorg-libxscrnsaver-1 | 14 KB     |            |   0% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+pthread-stubs-0.4    | 8 KB      |            |   0% [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+libfreetype-2.14.3   | 8 KB      |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+fonts-conda-forge-1  | 4 KB      |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+fonts-conda-ecosyste | 4 KB      |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+libcurl-8.20.0       | 458 KB    | ########## | 100% [A[A[A[Alibglib-2.88.1       | 4.5 MB    | #######2   |  73% 
+poppler-data-0.4.12  | 2.2 MB    |            |   1% [A
+
+
+libnghttp2-1.68.1    | 648 KB    | #######1   |  72% [A[A[A
+
+poppler-26.02.0      | 1.9 MB    | ########## | 100% [A[A
+
+poppler-26.02.0      | 1.9 MB    | ########## | 100% [A[A
+
+
+libnghttp2-1.68.1    | 648 KB    | ########## | 100% [A[A[A
+
+
+
+
+lcms2-2.19.1         | 245 KB    | 6          |   7% [A[A[A[A[Alibglib-2.88.1       | 4.5 MB    | ########## | 100% 
+
+
+
+
+lcms2-2.19.1         | 245 KB    | ########## | 100% [A[A[A[A[A
+poppler-data-0.4.12  | 2.2 MB    | ########## | 100% [A
+
+
+
+
+
+c-ares-1.34.6        | 203 KB    | 7          |   8% [A[A[A[A[A[A
+
+
+
+
+
+
+
+libegl-1.7.0         | 44 KB     | ###6       |  37% [A[A[A[A[A[A[A[A
+
+
+
+
+
+c-ares-1.34.6        | 203 KB    | ########## | 100% [A[A[A[A[A[A
+
+
+
+
+
+
+
+libegl-1.7.0         | 44 KB     | ########## | 100% [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+xorg-libxi-1.8.2     | 46 KB     | ###4       |  35% [A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+xorg-libxtst-1.2.5   | 32 KB     | ####9      |  50% [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+xorg-libxi-1.8.2     | 46 KB     | ########## | 100% [A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+xorg-libxscrnsaver-1 | 14 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+xorg-libxtst-1.2.5   | 32 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+xorg-libxscrnsaver-1 | 14 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+pthread-stubs-0.4    | 8 KB      | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+libfreetype-2.14.3   | 8 KB      | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+pthread-stubs-0.4    | 8 KB      | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+libfreetype-2.14.3   | 8 KB      | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+fonts-conda-forge-1  | 4 KB      | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+fonts-conda-forge-1  | 4 KB      | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+fonts-conda-ecosyste | 4 KB      | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+fonts-conda-ecosyste | 4 KB      | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+libcurl-8.20.0       | 458 KB    | ########## | 100% [A[A[A[A
+
+
+
+libcurl-8.20.0       | 458 KB    | ########## | 100% [A[A[A[A
+
+
+libnghttp2-1.68.1    | 648 KB    | ########## | 100% [A[A[A
+
+
+
+
+lcms2-2.19.1         | 245 KB    | ########## | 100% [A[A[A[A[A
+
+
+
+
+lcms2-2.19.1         | 245 KB    | ########## | 100% [A[A[A[A[A
+
+poppler-26.02.0      | 1.9 MB    | ########## | 100% [A[A
+
+
+
+
+
+c-ares-1.34.6        | 203 KB    | ########## | 100% [A[A[A[A[A[A
+poppler-data-0.4.12  | 2.2 MB    | ########## | 100% [A
+
+
+
+
+
+c-ares-1.34.6        | 203 KB    | ########## | 100% [A[A[A[A[A[A
+poppler-data-0.4.12  | 2.2 MB    | ########## | 100% [A
+
+
+
+
+
+
+
+libegl-1.7.0         | 44 KB     | ########## | 100% [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+libegl-1.7.0         | 44 KB     | ########## | 100% [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+xorg-libxi-1.8.2     | 46 KB     | ########## | 100% [A[A[A[A[A[A[A
+
+
+
+
+
+
+xorg-libxi-1.8.2     | 46 KB     | ########## | 100% [A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+xorg-libxscrnsaver-1 | 14 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+xorg-libxtst-1.2.5   | 32 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+xorg-libxtst-1.2.5   | 32 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+libfreetype-2.14.3   | 8 KB      | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+pthread-stubs-0.4    | 8 KB      | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+fonts-conda-forge-1  | 4 KB      | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+fonts-conda-ecosyste | 4 KB      | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[Alibglib-2.88.1       | 4.5 MB    | ########## | 100%                                                      
+                                                     [A
+
+                                                     [A[A
+
+
+                                                     [A[A[A
+
+
+
+                                                     [A[A[A[A
+
+
+
+
+                                                     [A[A[A[A[A
+
+
+
+
+
+                                                     [A[A[A[A[A[A
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A[A[A[A done
+Preparing transaction: - \ | / - \ | done
+Verifying transaction: - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | done
+Executing transaction: - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / done
+
+Installing olmocr[gpu] via pip (PyTorch cu128 wheels)...
+Requirement already satisfied: pip in /projects/bepc/zfeng2/envs/olmocr_env/lib/python3.11/site-packages (26.1.1)
+Looking in indexes: https://pypi.org/simple, https://download.pytorch.org/whl/cu128
+Collecting olmocr[gpu]
+  Downloading olmocr-0.4.27-py3-none-any.whl.metadata (38 kB)
+Collecting cached-path (from olmocr[gpu])
+  Downloading cached_path-1.8.10-py3-none-any.whl.metadata (19 kB)
+Collecting smart_open (from olmocr[gpu])
+  Downloading smart_open-7.6.0-py3-none-any.whl.metadata (25 kB)
+Collecting pypdf>=5.2.0 (from olmocr[gpu])
+  Downloading pypdf-6.10.2-py3-none-any.whl.metadata (7.1 kB)
+Collecting pypdfium2 (from olmocr[gpu])
+  Downloading pypdfium2-5.8.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (68 kB)
+Collecting cryptography (from olmocr[gpu])
+  Downloading cryptography-48.0.0-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.3 kB)
+Collecting lingua-language-detector (from olmocr[gpu])
+  Downloading lingua_language_detector-2.1.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (32 kB)
+Collecting Pillow (from olmocr[gpu])
+  Downloading pillow-12.2.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+Collecting ftfy (from olmocr[gpu])
+  Downloading ftfy-6.3.1-py3-none-any.whl.metadata (7.3 kB)
+Collecting bleach (from olmocr[gpu])
+  Downloading bleach-6.3.0-py3-none-any.whl.metadata (31 kB)
+Collecting markdown2 (from olmocr[gpu])
+  Downloading markdown2-2.5.5-py3-none-any.whl.metadata (2.1 kB)
+Collecting markdownify (from olmocr[gpu])
+  Downloading markdownify-1.2.2-py3-none-any.whl.metadata (9.9 kB)
+Collecting filelock (from olmocr[gpu])
+  Using cached filelock-3.29.0-py3-none-any.whl.metadata (2.0 kB)
+Collecting orjson (from olmocr[gpu])
+  Downloading orjson-3.11.9-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (41 kB)
+Collecting requests (from olmocr[gpu])
+  Using cached requests-2.33.1-py3-none-any.whl.metadata (4.8 kB)
+Collecting zstandard (from olmocr[gpu])
+  Downloading zstandard-0.25.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.3 kB)
+Collecting boto3 (from olmocr[gpu])
+  Downloading boto3-1.43.6-py3-none-any.whl.metadata (6.5 kB)
+Collecting httpx (from olmocr[gpu])
+  Using cached httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting torch>=2.7.0 (from olmocr[gpu])
+  Downloading torch-2.11.0%2Bcu128-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (29 kB)
+Collecting transformers==4.57.3 (from olmocr[gpu])
+  Downloading transformers-4.57.3-py3-none-any.whl.metadata (43 kB)
+Collecting vllm==0.11.2 (from olmocr[gpu])
+  Downloading vllm-0.11.2-cp38-abi3-manylinux1_x86_64.whl.metadata (18 kB)
+Collecting huggingface-hub<1.0,>=0.34.0 (from transformers==4.57.3->olmocr[gpu])
+  Downloading huggingface_hub-0.36.2-py3-none-any.whl.metadata (15 kB)
+Collecting numpy>=1.17 (from transformers==4.57.3->olmocr[gpu])
+  Downloading numpy-2.4.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+Requirement already satisfied: packaging>=20.0 in /projects/bepc/zfeng2/envs/olmocr_env/lib/python3.11/site-packages (from transformers==4.57.3->olmocr[gpu]) (26.2)
+Collecting pyyaml>=5.1 (from transformers==4.57.3->olmocr[gpu])
+  Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting regex!=2019.12.17 (from transformers==4.57.3->olmocr[gpu])
+  Downloading regex-2026.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+Collecting tokenizers<=0.23.0,>=0.22.0 (from transformers==4.57.3->olmocr[gpu])
+  Using cached tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+Collecting safetensors>=0.4.3 (from transformers==4.57.3->olmocr[gpu])
+  Using cached safetensors-0.7.0-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Collecting tqdm>=4.27 (from transformers==4.57.3->olmocr[gpu])
+  Using cached tqdm-4.67.3-py3-none-any.whl.metadata (57 kB)
+Collecting cachetools (from vllm==0.11.2->olmocr[gpu])
+  Downloading cachetools-7.1.1-py3-none-any.whl.metadata (5.8 kB)
+Collecting psutil (from vllm==0.11.2->olmocr[gpu])
+  Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+Collecting sentencepiece (from vllm==0.11.2->olmocr[gpu])
+  Downloading sentencepiece-0.2.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+Collecting blake3 (from vllm==0.11.2->olmocr[gpu])
+  Downloading blake3-1.0.8-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.6 kB)
+Collecting py-cpuinfo (from vllm==0.11.2->olmocr[gpu])
+  Using cached py_cpuinfo-9.0.0-py3-none-any.whl.metadata (794 bytes)
+Collecting protobuf (from vllm==0.11.2->olmocr[gpu])
+  Using cached protobuf-7.34.1-cp310-abi3-manylinux2014_x86_64.whl.metadata (595 bytes)
+Collecting fastapi>=0.115.0 (from fastapi[standard]>=0.115.0->vllm==0.11.2->olmocr[gpu])
+  Downloading fastapi-0.136.1-py3-none-any.whl.metadata (28 kB)
+Collecting aiohttp (from vllm==0.11.2->olmocr[gpu])
+  Downloading aiohttp-3.13.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+Collecting openai>=1.99.1 (from vllm==0.11.2->olmocr[gpu])
+  Downloading openai-2.36.0-py3-none-any.whl.metadata (31 kB)
+Collecting pydantic>=2.12.0 (from vllm==0.11.2->olmocr[gpu])
+  Downloading pydantic-2.13.4-py3-none-any.whl.metadata (109 kB)
+Collecting prometheus_client>=0.18.0 (from vllm==0.11.2->olmocr[gpu])
+  Using cached prometheus_client-0.25.0-py3-none-any.whl.metadata (2.1 kB)
+Collecting prometheus-fastapi-instrumentator>=7.0.0 (from vllm==0.11.2->olmocr[gpu])
+  Using cached prometheus_fastapi_instrumentator-7.1.0-py3-none-any.whl.metadata (13 kB)
+Collecting tiktoken>=0.6.0 (from vllm==0.11.2->olmocr[gpu])
+  Downloading tiktoken-0.12.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (6.7 kB)
+Collecting lm-format-enforcer==0.11.3 (from vllm==0.11.2->olmocr[gpu])
+  Using cached lm_format_enforcer-0.11.3-py3-none-any.whl.metadata (17 kB)
+Collecting llguidance<1.4.0,>=1.3.0 (from vllm==0.11.2->olmocr[gpu])
+  Using cached llguidance-1.3.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (10 kB)
+Collecting outlines_core==0.2.11 (from vllm==0.11.2->olmocr[gpu])
+  Downloading outlines_core-0.2.11-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.8 kB)
+Collecting diskcache==5.6.3 (from vllm==0.11.2->olmocr[gpu])
+  Using cached diskcache-5.6.3-py3-none-any.whl.metadata (20 kB)
+Collecting lark==1.2.2 (from vllm==0.11.2->olmocr[gpu])
+  Using cached lark-1.2.2-py3-none-any.whl.metadata (1.8 kB)
+Collecting xgrammar==0.1.25 (from vllm==0.11.2->olmocr[gpu])
+  Downloading xgrammar-0.1.25-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.5 kB)
+Collecting typing_extensions>=4.10 (from vllm==0.11.2->olmocr[gpu])
+  Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting partial-json-parser (from vllm==0.11.2->olmocr[gpu])
+  Using cached partial_json_parser-0.2.1.1.post7-py3-none-any.whl.metadata (6.1 kB)
+Collecting pyzmq>=25.0.0 (from vllm==0.11.2->olmocr[gpu])
+  Downloading pyzmq-27.1.0-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (6.0 kB)
+Collecting msgspec (from vllm==0.11.2->olmocr[gpu])
+  Downloading msgspec-0.21.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.8 kB)
+Collecting gguf>=0.13.0 (from vllm==0.11.2->olmocr[gpu])
+  Downloading gguf-0.19.0-py3-none-any.whl.metadata (4.1 kB)
+Collecting mistral_common>=1.8.5 (from mistral_common[image]>=1.8.5->vllm==0.11.2->olmocr[gpu])
+  Downloading mistral_common-1.11.2-py3-none-any.whl.metadata (5.9 kB)
+Collecting opencv-python-headless>=4.11.0 (from vllm==0.11.2->olmocr[gpu])
+  Using cached opencv_python_headless-4.13.0.92-cp37-abi3-manylinux_2_28_x86_64.whl.metadata (19 kB)
+Collecting einops (from vllm==0.11.2->olmocr[gpu])
+  Using cached einops-0.8.2-py3-none-any.whl.metadata (13 kB)
+Collecting compressed-tensors==0.12.2 (from vllm==0.11.2->olmocr[gpu])
+  Downloading compressed_tensors-0.12.2-py3-none-any.whl.metadata (7.0 kB)
+Collecting depyf==0.20.0 (from vllm==0.11.2->olmocr[gpu])
+  Using cached depyf-0.20.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting cloudpickle (from vllm==0.11.2->olmocr[gpu])
+  Using cached cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+Collecting watchfiles (from vllm==0.11.2->olmocr[gpu])
+  Downloading watchfiles-1.1.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+Collecting python-json-logger (from vllm==0.11.2->olmocr[gpu])
+  Using cached python_json_logger-4.1.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting scipy (from vllm==0.11.2->olmocr[gpu])
+  Downloading scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+Collecting ninja (from vllm==0.11.2->olmocr[gpu])
+  Using cached ninja-1.13.0-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.1 kB)
+Collecting pybase64 (from vllm==0.11.2->olmocr[gpu])
+  Downloading pybase64-1.4.3-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (8.7 kB)
+Collecting cbor2 (from vllm==0.11.2->olmocr[gpu])
+  Downloading cbor2-6.0.1-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+Collecting setproctitle (from vllm==0.11.2->olmocr[gpu])
+  Downloading setproctitle-1.3.7-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (10 kB)
+Collecting openai-harmony>=0.0.3 (from vllm==0.11.2->olmocr[gpu])
+  Using cached openai_harmony-0.0.8-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.0 kB)
+Collecting anthropic==0.71.0 (from vllm==0.11.2->olmocr[gpu])
+  Downloading anthropic-0.71.0-py3-none-any.whl.metadata (28 kB)
+Collecting model-hosting-container-standards<1.0.0 (from vllm==0.11.2->olmocr[gpu])
+  Downloading model_hosting_container_standards-0.1.15-py3-none-any.whl.metadata (24 kB)
+Collecting numba==0.61.2 (from vllm==0.11.2->olmocr[gpu])
+  Downloading numba-0.61.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.8 kB)
+Collecting ray>=2.48.0 (from ray[cgraph]>=2.48.0->vllm==0.11.2->olmocr[gpu])
+  Downloading ray-2.55.1-cp311-cp311-manylinux2014_x86_64.whl.metadata (21 kB)
+Collecting torch>=2.7.0 (from olmocr[gpu])
+  Downloading torch-2.9.0%2Bcu128-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (30 kB)
+Collecting torchaudio==2.9.0 (from vllm==0.11.2->olmocr[gpu])
+  Downloading torchaudio-2.9.0%2Bcu128-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (6.9 kB)
+Collecting torchvision==0.24.0 (from vllm==0.11.2->olmocr[gpu])
+  Downloading torchvision-0.24.0%2Bcu128-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (5.9 kB)
+Collecting xformers==0.0.33.post1 (from vllm==0.11.2->olmocr[gpu])
+  Downloading xformers-0.0.33.post1-cp39-abi3-manylinux_2_28_x86_64.whl.metadata (1.2 kB)
+Collecting flashinfer-python==0.5.2 (from vllm==0.11.2->olmocr[gpu])
+  Downloading flashinfer_python-0.5.2-py3-none-any.whl.metadata (11 kB)
+Collecting anyio<5,>=3.5.0 (from anthropic==0.71.0->vllm==0.11.2->olmocr[gpu])
+  Using cached anyio-4.13.0-py3-none-any.whl.metadata (4.5 kB)
+Collecting distro<2,>=1.7.0 (from anthropic==0.71.0->vllm==0.11.2->olmocr[gpu])
+  Using cached distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+Collecting docstring-parser<1,>=0.15 (from anthropic==0.71.0->vllm==0.11.2->olmocr[gpu])
+  Using cached docstring_parser-0.18.0-py3-none-any.whl.metadata (3.5 kB)
+Collecting jiter<1,>=0.4.0 (from anthropic==0.71.0->vllm==0.11.2->olmocr[gpu])
+  Downloading jiter-0.14.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.2 kB)
+Collecting sniffio (from anthropic==0.71.0->vllm==0.11.2->olmocr[gpu])
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting loguru (from compressed-tensors==0.12.2->vllm==0.11.2->olmocr[gpu])
+  Using cached loguru-0.7.3-py3-none-any.whl.metadata (22 kB)
+Collecting astor (from depyf==0.20.0->vllm==0.11.2->olmocr[gpu])
+  Using cached astor-0.8.1-py2.py3-none-any.whl.metadata (4.2 kB)
+Collecting dill (from depyf==0.20.0->vllm==0.11.2->olmocr[gpu])
+  Using cached dill-0.4.1-py3-none-any.whl.metadata (10 kB)
+Collecting apache-tvm-ffi<0.2,>=0.1 (from flashinfer-python==0.5.2->vllm==0.11.2->olmocr[gpu])
+  Downloading apache_tvm_ffi-0.1.11-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (6.1 kB)
+Collecting click (from flashinfer-python==0.5.2->vllm==0.11.2->olmocr[gpu])
+  Downloading click-8.3.3-py3-none-any.whl.metadata (2.6 kB)
+Collecting nvidia-cudnn-frontend>=1.13.0 (from flashinfer-python==0.5.2->vllm==0.11.2->olmocr[gpu])
+  Downloading nvidia_cudnn_frontend-1.23.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (12 kB)
+Collecting nvidia-cutlass-dsl>=4.2.1 (from flashinfer-python==0.5.2->vllm==0.11.2->olmocr[gpu])
+  Downloading nvidia_cutlass_dsl-4.5.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting nvidia-ml-py (from flashinfer-python==0.5.2->vllm==0.11.2->olmocr[gpu])
+  Using cached nvidia_ml_py-13.595.45-py3-none-any.whl.metadata (9.7 kB)
+Collecting tabulate (from flashinfer-python==0.5.2->vllm==0.11.2->olmocr[gpu])
+  Using cached tabulate-0.10.0-py3-none-any.whl.metadata (40 kB)
+Collecting interegular>=0.3.2 (from lm-format-enforcer==0.11.3->vllm==0.11.2->olmocr[gpu])
+  Using cached interegular-0.3.3-py37-none-any.whl.metadata (3.0 kB)
+Collecting llvmlite<0.45,>=0.44.0dev0 (from numba==0.61.2->vllm==0.11.2->olmocr[gpu])
+  Downloading llvmlite-0.44.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.8 kB)
+Collecting numpy>=1.17 (from transformers==4.57.3->olmocr[gpu])
+  Downloading numpy-2.2.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+Collecting sympy>=1.13.3 (from torch>=2.7.0->olmocr[gpu])
+  Using cached sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Collecting networkx>=2.5.1 (from torch>=2.7.0->olmocr[gpu])
+  Downloading networkx-3.6.1-py3-none-any.whl.metadata (6.8 kB)
+Collecting jinja2 (from torch>=2.7.0->olmocr[gpu])
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting fsspec>=0.8.5 (from torch>=2.7.0->olmocr[gpu])
+  Downloading fsspec-2026.4.0-py3-none-any.whl.metadata (10 kB)
+Collecting nvidia-cuda-nvrtc-cu12==12.8.93 (from torch>=2.7.0->olmocr[gpu])
+  Downloading nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (88.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.0/88.0 MB 218.9 MB/s  0:00:00
+Collecting nvidia-cuda-runtime-cu12==12.8.90 (from torch>=2.7.0->olmocr[gpu])
+  Downloading nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (954 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 954.8/954.8 kB 173.8 MB/s  0:00:00
+Collecting nvidia-cuda-cupti-cu12==12.8.90 (from torch>=2.7.0->olmocr[gpu])
+  Downloading nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (10.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 240.9 MB/s  0:00:00
+Collecting nvidia-cudnn-cu12==9.10.2.21 (from torch>=2.7.0->olmocr[gpu])
+  Downloading nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl (706.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 706.8/706.8 MB 156.6 MB/s  0:00:04
+Collecting nvidia-cublas-cu12==12.8.4.1 (from torch>=2.7.0->olmocr[gpu])
+  Downloading nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl (594.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 594.3/594.3 MB 282.5 MB/s  0:00:02
+Collecting nvidia-cufft-cu12==11.3.3.83 (from torch>=2.7.0->olmocr[gpu])
+  Downloading nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (193.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 193.1/193.1 MB 265.2 MB/s  0:00:00
+Collecting nvidia-curand-cu12==10.3.9.90 (from torch>=2.7.0->olmocr[gpu])
+  Downloading nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl (63.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.6/63.6 MB 300.2 MB/s  0:00:00
+Collecting nvidia-cusolver-cu12==11.7.3.90 (from torch>=2.7.0->olmocr[gpu])
+  Downloading nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl (267.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 267.5/267.5 MB 309.2 MB/s  0:00:00
+Collecting nvidia-cusparse-cu12==12.5.8.93 (from torch>=2.7.0->olmocr[gpu])
+  Downloading nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (288.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 288.2/288.2 MB 330.9 MB/s  0:00:00
+Collecting nvidia-cusparselt-cu12==0.7.1 (from torch>=2.7.0->olmocr[gpu])
+  Downloading nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl (287.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 287.2/287.2 MB 179.4 MB/s  0:00:01
+Collecting nvidia-nccl-cu12==2.27.5 (from torch>=2.7.0->olmocr[gpu])
+  Downloading nvidia_nccl_cu12-2.27.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (322.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 322.3/322.3 MB 162.3 MB/s  0:00:01
+Collecting nvidia-nvshmem-cu12==3.3.20 (from torch>=2.7.0->olmocr[gpu])
+  Downloading nvidia_nvshmem_cu12-3.3.20-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (124.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 124.7/124.7 MB 170.1 MB/s  0:00:00
+Collecting nvidia-nvtx-cu12==12.8.90 (from torch>=2.7.0->olmocr[gpu])
+  Downloading nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (89 kB)
+Collecting nvidia-nvjitlink-cu12==12.8.93 (from torch>=2.7.0->olmocr[gpu])
+  Downloading nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (39.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 39.3/39.3 MB 136.6 MB/s  0:00:00
+Collecting nvidia-cufile-cu12==1.13.1.3 (from torch>=2.7.0->olmocr[gpu])
+  Downloading nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 178.2 MB/s  0:00:00
+Collecting triton==3.5.0 (from torch>=2.7.0->olmocr[gpu])
+  Downloading triton-3.5.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (1.7 kB)
+Collecting idna>=2.8 (from anyio<5,>=3.5.0->anthropic==0.71.0->vllm==0.11.2->olmocr[gpu])
+  Downloading idna-3.13-py3-none-any.whl.metadata (8.0 kB)
+Collecting certifi (from httpx->olmocr[gpu])
+  Downloading certifi-2026.4.22-py3-none-any.whl.metadata (2.5 kB)
+Collecting httpcore==1.* (from httpx->olmocr[gpu])
+  Using cached httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting h11>=0.16 (from httpcore==1.*->httpx->olmocr[gpu])
+  Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting hf-xet<2.0.0,>=1.1.3 (from huggingface-hub<1.0,>=0.34.0->transformers==4.57.3->olmocr[gpu])
+  Downloading hf_xet-1.5.0-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+Collecting jmespath (from model-hosting-container-standards<1.0.0->vllm==0.11.2->olmocr[gpu])
+  Using cached jmespath-1.1.0-py3-none-any.whl.metadata (7.6 kB)
+Requirement already satisfied: setuptools in /projects/bepc/zfeng2/envs/olmocr_env/lib/python3.11/site-packages (from model-hosting-container-standards<1.0.0->vllm==0.11.2->olmocr[gpu]) (82.0.1)
+Collecting starlette>=0.49.1 (from model-hosting-container-standards<1.0.0->vllm==0.11.2->olmocr[gpu])
+  Using cached starlette-1.0.0-py3-none-any.whl.metadata (6.3 kB)
+Collecting supervisor>=4.2.0 (from model-hosting-container-standards<1.0.0->vllm==0.11.2->olmocr[gpu])
+  Using cached supervisor-4.3.0-py2.py3-none-any.whl.metadata (87 kB)
+Collecting annotated-types>=0.6.0 (from pydantic>=2.12.0->vllm==0.11.2->olmocr[gpu])
+  Using cached annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.46.4 (from pydantic>=2.12.0->vllm==0.11.2->olmocr[gpu])
+  Downloading pydantic_core-2.46.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+Collecting typing-inspection>=0.4.2 (from pydantic>=2.12.0->vllm==0.11.2->olmocr[gpu])
+  Using cached typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+Collecting annotated-doc>=0.0.2 (from fastapi>=0.115.0->fastapi[standard]>=0.115.0->vllm==0.11.2->olmocr[gpu])
+  Using cached annotated_doc-0.0.4-py3-none-any.whl.metadata (6.6 kB)
+Collecting fastapi-cli>=0.0.8 (from fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm==0.11.2->olmocr[gpu])
+  Using cached fastapi_cli-0.0.24-py3-none-any.whl.metadata (6.4 kB)
+Collecting fastar>=0.9.0 (from fastapi[standard]>=0.115.0->vllm==0.11.2->olmocr[gpu])
+  Downloading fastar-0.11.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+Collecting python-multipart>=0.0.18 (from fastapi[standard]>=0.115.0->vllm==0.11.2->olmocr[gpu])
+  Downloading python_multipart-0.0.27-py3-none-any.whl.metadata (2.1 kB)
+Collecting email-validator>=2.0.0 (from fastapi[standard]>=0.115.0->vllm==0.11.2->olmocr[gpu])
+  Using cached email_validator-2.3.0-py3-none-any.whl.metadata (26 kB)
+Collecting uvicorn>=0.12.0 (from uvicorn[standard]>=0.12.0; extra == "standard"->fastapi[standard]>=0.115.0->vllm==0.11.2->olmocr[gpu])
+  Downloading uvicorn-0.46.0-py3-none-any.whl.metadata (6.7 kB)
+Collecting pydantic-settings>=2.0.0 (from fastapi[standard]>=0.115.0->vllm==0.11.2->olmocr[gpu])
+  Downloading pydantic_settings-2.14.1-py3-none-any.whl.metadata (3.4 kB)
+Collecting pydantic-extra-types>=2.0.0 (from fastapi[standard]>=0.115.0->vllm==0.11.2->olmocr[gpu])
+  Using cached pydantic_extra_types-2.11.1-py3-none-any.whl.metadata (4.2 kB)
+Collecting dnspython>=2.0.0 (from email-validator>=2.0.0->fastapi[standard]>=0.115.0->vllm==0.11.2->olmocr[gpu])
+  Using cached dnspython-2.8.0-py3-none-any.whl.metadata (5.7 kB)
+Collecting typer>=0.16.0 (from fastapi-cli>=0.0.8->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm==0.11.2->olmocr[gpu])
+  Downloading typer-0.25.1-py3-none-any.whl.metadata (15 kB)
+Collecting rich-toolkit>=0.14.8 (from fastapi-cli>=0.0.8->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm==0.11.2->olmocr[gpu])
+  Using cached rich_toolkit-0.19.7-py3-none-any.whl.metadata (1.0 kB)
+Collecting fastapi-cloud-cli>=0.1.1 (from fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm==0.11.2->olmocr[gpu])
+  Downloading fastapi_cloud_cli-0.17.1-py3-none-any.whl.metadata (3.3 kB)
+Collecting rignore>=0.5.1 (from fastapi-cloud-cli>=0.1.1->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm==0.11.2->olmocr[gpu])
+  Downloading rignore-0.7.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+Collecting sentry-sdk>=2.20.0 (from fastapi-cloud-cli>=0.1.1->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm==0.11.2->olmocr[gpu])
+  Downloading sentry_sdk-2.59.0-py2.py3-none-any.whl.metadata (10 kB)
+Collecting MarkupSafe>=2.0 (from jinja2->torch>=2.7.0->olmocr[gpu])
+  Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting jsonschema>=4.21.1 (from mistral_common>=1.8.5->mistral_common[image]>=1.8.5->vllm==0.11.2->olmocr[gpu])
+  Using cached jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting attrs>=22.2.0 (from jsonschema>=4.21.1->mistral_common>=1.8.5->mistral_common[image]>=1.8.5->vllm==0.11.2->olmocr[gpu])
+  Using cached attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.21.1->mistral_common>=1.8.5->mistral_common[image]>=1.8.5->vllm==0.11.2->olmocr[gpu])
+  Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=4.21.1->mistral_common>=1.8.5->mistral_common[image]>=1.8.5->vllm==0.11.2->olmocr[gpu])
+  Using cached referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.25.0 (from jsonschema>=4.21.1->mistral_common>=1.8.5->mistral_common[image]>=1.8.5->vllm==0.11.2->olmocr[gpu])
+  Downloading rpds_py-0.30.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Collecting nvidia-cutlass-dsl-libs-base==4.5.0 (from nvidia-cutlass-dsl>=4.2.1->flashinfer-python==0.5.2->vllm==0.11.2->olmocr[gpu])
+  Downloading nvidia_cutlass_dsl_libs_base-4.5.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting cuda-python>=12.8 (from nvidia-cutlass-dsl-libs-base==4.5.0->nvidia-cutlass-dsl>=4.2.1->flashinfer-python==0.5.2->vllm==0.11.2->olmocr[gpu])
+  Using cached cuda_python-13.2.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting cuda-bindings~=13.2.0 (from cuda-python>=12.8->nvidia-cutlass-dsl-libs-base==4.5.0->nvidia-cutlass-dsl>=4.2.1->flashinfer-python==0.5.2->vllm==0.11.2->olmocr[gpu])
+  Downloading cuda_bindings-13.2.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (2.3 kB)
+Collecting cuda-pathfinder~=1.1 (from cuda-python>=12.8->nvidia-cutlass-dsl-libs-base==4.5.0->nvidia-cutlass-dsl>=4.2.1->flashinfer-python==0.5.2->vllm==0.11.2->olmocr[gpu])
+  Downloading cuda_pathfinder-1.5.4-py3-none-any.whl.metadata (1.9 kB)
+Collecting starlette>=0.49.1 (from model-hosting-container-standards<1.0.0->vllm==0.11.2->olmocr[gpu])
+  Using cached starlette-0.52.1-py3-none-any.whl.metadata (6.3 kB)
+Collecting pycountry>=23 (from pydantic-extra-types[pycountry]>=2.10.5->mistral_common>=1.8.5->mistral_common[image]>=1.8.5->vllm==0.11.2->olmocr[gpu])
+  Using cached pycountry-26.2.16-py3-none-any.whl.metadata (12 kB)
+Collecting python-dotenv>=0.21.0 (from pydantic-settings>=2.0.0->fastapi[standard]>=0.115.0->vllm==0.11.2->olmocr[gpu])
+  Using cached python_dotenv-1.2.2-py3-none-any.whl.metadata (27 kB)
+Collecting msgpack<2.0.0,>=1.0.0 (from ray>=2.48.0->ray[cgraph]>=2.48.0->vllm==0.11.2->olmocr[gpu])
+  Downloading msgpack-1.1.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+Collecting cupy-cuda12x (from ray[cgraph]>=2.48.0->vllm==0.11.2->olmocr[gpu])
+  Downloading cupy_cuda12x-14.0.1-cp311-cp311-manylinux2014_x86_64.whl.metadata (2.8 kB)
+Collecting charset_normalizer<4,>=2 (from requests->olmocr[gpu])
+  Downloading charset_normalizer-3.4.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+Collecting urllib3<3,>=1.26 (from requests->olmocr[gpu])
+  Downloading urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting rich>=13.7.1 (from rich-toolkit>=0.14.8->fastapi-cli>=0.0.8->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm==0.11.2->olmocr[gpu])
+  Using cached rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+Collecting markdown-it-py>=2.2.0 (from rich>=13.7.1->rich-toolkit>=0.14.8->fastapi-cli>=0.0.8->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm==0.11.2->olmocr[gpu])
+  Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich>=13.7.1->rich-toolkit>=0.14.8->fastapi-cli>=0.0.8->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm==0.11.2->olmocr[gpu])
+  Using cached pygments-2.20.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=13.7.1->rich-toolkit>=0.14.8->fastapi-cli>=0.0.8->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm==0.11.2->olmocr[gpu])
+  Using cached mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch>=2.7.0->olmocr[gpu])
+  Using cached mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting shellingham>=1.3.0 (from typer>=0.16.0->fastapi-cli>=0.0.8->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm==0.11.2->olmocr[gpu])
+  Using cached shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+Collecting httptools>=0.6.3 (from uvicorn[standard]>=0.12.0; extra == "standard"->fastapi[standard]>=0.115.0->vllm==0.11.2->olmocr[gpu])
+  Downloading httptools-0.7.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (3.5 kB)
+Collecting uvloop>=0.15.1 (from uvicorn[standard]>=0.12.0; extra == "standard"->fastapi[standard]>=0.115.0->vllm==0.11.2->olmocr[gpu])
+  Downloading uvloop-0.22.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.9 kB)
+Collecting websockets>=10.4 (from uvicorn[standard]>=0.12.0; extra == "standard"->fastapi[standard]>=0.115.0->vllm==0.11.2->olmocr[gpu])
+  Downloading websockets-16.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.8 kB)
+Collecting aiohappyeyeballs>=2.5.0 (from aiohttp->vllm==0.11.2->olmocr[gpu])
+  Using cached aiohappyeyeballs-2.6.1-py3-none-any.whl.metadata (5.9 kB)
+Collecting aiosignal>=1.4.0 (from aiohttp->vllm==0.11.2->olmocr[gpu])
+  Using cached aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp->vllm==0.11.2->olmocr[gpu])
+  Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+Collecting multidict<7.0,>=4.5 (from aiohttp->vllm==0.11.2->olmocr[gpu])
+  Downloading multidict-6.7.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+Collecting propcache>=0.2.0 (from aiohttp->vllm==0.11.2->olmocr[gpu])
+  Downloading propcache-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+Collecting yarl<2.0,>=1.17.0 (from aiohttp->vllm==0.11.2->olmocr[gpu])
+  Downloading yarl-1.23.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+Collecting webencodings (from bleach->olmocr[gpu])
+  Downloading webencodings-0.5.1-py2.py3-none-any.whl.metadata (2.1 kB)
+Collecting botocore<1.44.0,>=1.43.6 (from boto3->olmocr[gpu])
+  Downloading botocore-1.43.6-py3-none-any.whl.metadata (5.5 kB)
+Collecting s3transfer<0.18.0,>=0.17.0 (from boto3->olmocr[gpu])
+  Downloading s3transfer-0.17.0-py3-none-any.whl.metadata (1.7 kB)
+Collecting python-dateutil<3.0.0,>=2.1 (from botocore<1.44.0,>=1.43.6->boto3->olmocr[gpu])
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting six>=1.5 (from python-dateutil<3.0.0,>=2.1->botocore<1.44.0,>=1.43.6->boto3->olmocr[gpu])
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting rich>=13.7.1 (from rich-toolkit>=0.14.8->fastapi-cli>=0.0.8->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm==0.11.2->olmocr[gpu])
+  Downloading rich-13.9.4-py3-none-any.whl.metadata (18 kB)
+Collecting google-cloud-storage<4.0,>=1.32.0 (from cached-path->olmocr[gpu])
+  Downloading google_cloud_storage-3.10.1-py3-none-any.whl.metadata (15 kB)
+Collecting google-auth<3.0.0,>=2.26.1 (from google-cloud-storage<4.0,>=1.32.0->cached-path->olmocr[gpu])
+  Downloading google_auth-2.52.0-py3-none-any.whl.metadata (5.5 kB)
+Collecting google-api-core<3.0.0,>=2.27.0 (from google-cloud-storage<4.0,>=1.32.0->cached-path->olmocr[gpu])
+  Downloading google_api_core-2.30.3-py3-none-any.whl.metadata (3.1 kB)
+Collecting google-cloud-core<3.0.0,>=2.4.2 (from google-cloud-storage<4.0,>=1.32.0->cached-path->olmocr[gpu])
+  Downloading google_cloud_core-2.6.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting google-resumable-media<3.0.0,>=2.7.2 (from google-cloud-storage<4.0,>=1.32.0->cached-path->olmocr[gpu])
+  Downloading google_resumable_media-2.9.0-py3-none-any.whl.metadata (2.2 kB)
+Collecting google-crc32c<2.0.0,>=1.1.3 (from google-cloud-storage<4.0,>=1.32.0->cached-path->olmocr[gpu])
+  Downloading google_crc32c-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (1.7 kB)
+Collecting googleapis-common-protos<2.0.0,>=1.63.2 (from google-api-core<3.0.0,>=2.27.0->google-cloud-storage<4.0,>=1.32.0->cached-path->olmocr[gpu])
+  Downloading googleapis_common_protos-1.75.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting proto-plus<2.0.0,>=1.22.3 (from google-api-core<3.0.0,>=2.27.0->google-cloud-storage<4.0,>=1.32.0->cached-path->olmocr[gpu])
+  Downloading proto_plus-1.28.0-py3-none-any.whl.metadata (2.2 kB)
+Collecting pyasn1-modules>=0.2.1 (from google-auth<3.0.0,>=2.26.1->google-cloud-storage<4.0,>=1.32.0->cached-path->olmocr[gpu])
+  Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+Collecting cffi>=2.0.0 (from cryptography->olmocr[gpu])
+  Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+Collecting pycparser (from cffi>=2.0.0->cryptography->olmocr[gpu])
+  Using cached pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+Collecting pyasn1<0.7.0,>=0.6.1 (from pyasn1-modules>=0.2.1->google-auth<3.0.0,>=2.26.1->google-cloud-storage<4.0,>=1.32.0->cached-path->olmocr[gpu])
+  Downloading pyasn1-0.6.3-py3-none-any.whl.metadata (8.4 kB)
+Collecting wcwidth (from ftfy->olmocr[gpu])
+  Downloading wcwidth-0.7.0-py3-none-any.whl.metadata (36 kB)
+Collecting beautifulsoup4<5,>=4.9 (from markdownify->olmocr[gpu])
+  Downloading beautifulsoup4-4.14.3-py3-none-any.whl.metadata (3.8 kB)
+Collecting soupsieve>=1.6.1 (from beautifulsoup4<5,>=4.9->markdownify->olmocr[gpu])
+  Downloading soupsieve-2.8.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting wrapt (from smart_open->olmocr[gpu])
+  Downloading wrapt-2.1.2-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (7.4 kB)
+Downloading olmocr-0.4.27-py3-none-any.whl (423 kB)
+Downloading transformers-4.57.3-py3-none-any.whl (12.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 66.0 MB/s  0:00:00
+Downloading vllm-0.11.2-cp38-abi3-manylinux1_x86_64.whl (370.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 370.3/370.3 MB 110.9 MB/s  0:00:03
+Downloading anthropic-0.71.0-py3-none-any.whl (355 kB)
+Downloading compressed_tensors-0.12.2-py3-none-any.whl (183 kB)
+Using cached depyf-0.20.0-py3-none-any.whl (39 kB)
+Using cached diskcache-5.6.3-py3-none-any.whl (45 kB)
+Downloading flashinfer_python-0.5.2-py3-none-any.whl (6.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 93.9 MB/s  0:00:00
+Using cached lark-1.2.2-py3-none-any.whl (111 kB)
+Using cached lm_format_enforcer-0.11.3-py3-none-any.whl (45 kB)
+Downloading numba-0.61.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 72.6 MB/s  0:00:00
+Downloading outlines_core-0.2.11-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 53.6 MB/s  0:00:00
+Downloading torch-2.9.0%2Bcu128-cp311-cp311-manylinux_2_28_x86_64.whl (900.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 900.9/900.9 MB 111.4 MB/s  0:00:05
+Downloading torchaudio-2.9.0%2Bcu128-cp311-cp311-manylinux_2_28_x86_64.whl (2.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 58.9 MB/s  0:00:00
+Downloading torchvision-0.24.0%2Bcu128-cp311-cp311-manylinux_2_28_x86_64.whl (8.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.0/8.0 MB 136.7 MB/s  0:00:00
+Downloading triton-3.5.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (170.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 170.4/170.4 MB 132.6 MB/s  0:00:01
+Downloading xformers-0.0.33.post1-cp39-abi3-manylinux_2_28_x86_64.whl (122.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 122.9/122.9 MB 128.5 MB/s  0:00:00
+Downloading xgrammar-0.1.25-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 110.8 MB/s  0:00:00
+Using cached anyio-4.13.0-py3-none-any.whl (114 kB)
+Downloading apache_tvm_ffi-0.1.11-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (2.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.8/2.8 MB 71.9 MB/s  0:00:00
+Using cached distro-1.9.0-py3-none-any.whl (20 kB)
+Using cached docstring_parser-0.18.0-py3-none-any.whl (22 kB)
+Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+Using cached httpcore-1.0.9-py3-none-any.whl (78 kB)
+Downloading huggingface_hub-0.36.2-py3-none-any.whl (566 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 566.4/566.4 kB 17.2 MB/s  0:00:00
+Downloading hf_xet-1.5.0-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 101.9 MB/s  0:00:00
+Downloading jiter-0.14.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (358 kB)
+Using cached llguidance-1.3.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+Downloading llvmlite-0.44.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (42.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.4/42.4 MB 116.8 MB/s  0:00:00
+Downloading model_hosting_container_standards-0.1.15-py3-none-any.whl (125 kB)
+Downloading numpy-2.2.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.8/16.8 MB 103.4 MB/s  0:00:00
+Downloading pydantic-2.13.4-py3-none-any.whl (472 kB)
+Downloading pydantic_core-2.46.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 55.9 MB/s  0:00:00
+Using cached tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Using cached annotated_types-0.7.0-py3-none-any.whl (13 kB)
+Downloading fastapi-0.136.1-py3-none-any.whl (117 kB)
+Using cached annotated_doc-0.0.4-py3-none-any.whl (5.3 kB)
+Using cached email_validator-2.3.0-py3-none-any.whl (35 kB)
+Using cached dnspython-2.8.0-py3-none-any.whl (331 kB)
+Using cached fastapi_cli-0.0.24-py3-none-any.whl (12 kB)
+Downloading fastapi_cloud_cli-0.17.1-py3-none-any.whl (34 kB)
+Downloading fastar-0.11.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (822 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 822.8/822.8 kB 24.9 MB/s  0:00:00
+Using cached filelock-3.29.0-py3-none-any.whl (39 kB)
+Downloading fsspec-2026.4.0-py3-none-any.whl (203 kB)
+Downloading gguf-0.19.0-py3-none-any.whl (118 kB)
+Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading idna-3.13-py3-none-any.whl (68 kB)
+Using cached interegular-0.3.3-py37-none-any.whl (23 kB)
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Downloading mistral_common-1.11.2-py3-none-any.whl (6.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.5/6.5 MB 108.3 MB/s  0:00:00
+Using cached jsonschema-4.26.0-py3-none-any.whl (90 kB)
+Using cached attrs-26.1.0-py3-none-any.whl (67 kB)
+Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Downloading networkx-3.6.1-py3-none-any.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 57.2 MB/s  0:00:00
+Downloading nvidia_cudnn_frontend-1.23.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (3.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 76.0 MB/s  0:00:00
+Downloading nvidia_cutlass_dsl-4.5.0-py3-none-any.whl (10 kB)
+Downloading nvidia_cutlass_dsl_libs_base-4.5.0-cp311-cp311-manylinux_2_28_x86_64.whl (74.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 74.5/74.5 MB 150.2 MB/s  0:00:00
+Downloading cuda_python-13.2.0-py3-none-any.whl (8.1 kB)
+Downloading cuda_bindings-13.2.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (6.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 107.8 MB/s  0:00:00
+Downloading cuda_pathfinder-1.5.4-py3-none-any.whl (51 kB)
+Downloading openai-2.36.0-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 40.6 MB/s  0:00:00
+Using cached openai_harmony-0.0.8-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+Using cached opencv_python_headless-4.13.0.92-cp37-abi3-manylinux_2_28_x86_64.whl (60.4 MB)
+Downloading pillow-12.2.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 106.4 MB/s  0:00:00
+Using cached prometheus_client-0.25.0-py3-none-any.whl (64 kB)
+Using cached prometheus_fastapi_instrumentator-7.1.0-py3-none-any.whl (19 kB)
+Using cached starlette-0.52.1-py3-none-any.whl (74 kB)
+Using cached pydantic_extra_types-2.11.1-py3-none-any.whl (79 kB)
+Using cached pycountry-26.2.16-py3-none-any.whl (8.0 MB)
+Downloading pydantic_settings-2.14.1-py3-none-any.whl (60 kB)
+Downloading pypdf-6.10.2-py3-none-any.whl (336 kB)
+Using cached python_dotenv-1.2.2-py3-none-any.whl (22 kB)
+Downloading python_multipart-0.0.27-py3-none-any.whl (29 kB)
+Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 23.1 MB/s  0:00:00
+Downloading pyzmq-27.1.0-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (857 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 857.0/857.0 kB 21.6 MB/s  0:00:00
+Downloading ray-2.55.1-cp311-cp311-manylinux2014_x86_64.whl (73.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.7/73.7 MB 147.2 MB/s  0:00:00
+Downloading msgpack-1.1.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (426 kB)
+Downloading click-8.3.3-py3-none-any.whl (110 kB)
+Downloading protobuf-7.34.1-cp310-abi3-manylinux2014_x86_64.whl (324 kB)
+Using cached referencing-0.37.0-py3-none-any.whl (26 kB)
+Downloading regex-2026.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (799 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 799.8/799.8 kB 27.1 MB/s  0:00:00
+Using cached requests-2.33.1-py3-none-any.whl (64 kB)
+Downloading charset_normalizer-3.4.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (214 kB)
+Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+Downloading certifi-2026.4.22-py3-none-any.whl (135 kB)
+Using cached rich_toolkit-0.19.7-py3-none-any.whl (32 kB)
+Using cached pygments-2.20.0-py3-none-any.whl (1.2 MB)
+Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading rignore-0.7.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (959 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 959.5/959.5 kB 26.0 MB/s  0:00:00
+Downloading rpds_py-0.30.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (390 kB)
+Using cached safetensors-0.7.0-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (507 kB)
+Downloading sentry_sdk-2.59.0-py2.py3-none-any.whl (468 kB)
+Using cached supervisor-4.3.0-py2.py3-none-any.whl (320 kB)
+Using cached sympy-1.14.0-py3-none-any.whl (6.3 MB)
+Using cached mpmath-1.3.0-py3-none-any.whl (536 kB)
+Downloading tiktoken-0.12.0-cp311-cp311-manylinux_2_28_x86_64.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 36.1 MB/s  0:00:00
+Using cached tqdm-4.67.3-py3-none-any.whl (78 kB)
+Downloading typer-0.25.1-py3-none-any.whl (58 kB)
+Using cached shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+Using cached typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+Downloading uvicorn-0.46.0-py3-none-any.whl (70 kB)
+Downloading httptools-0.7.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (456 kB)
+Downloading uvloop-0.22.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 87.2 MB/s  0:00:00
+Downloading watchfiles-1.1.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (456 kB)
+Downloading websockets-16.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (184 kB)
+Downloading aiohttp-3.13.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 52.7 MB/s  0:00:00
+Downloading multidict-6.7.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (246 kB)
+Downloading yarl-1.23.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (102 kB)
+Using cached aiohappyeyeballs-2.6.1-py3-none-any.whl (15 kB)
+Using cached aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+Downloading propcache-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (210 kB)
+Using cached astor-0.8.1-py2.py3-none-any.whl (27 kB)
+Downloading blake3-1.0.8-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (387 kB)
+Downloading bleach-6.3.0-py3-none-any.whl (164 kB)
+Downloading boto3-1.43.6-py3-none-any.whl (140 kB)
+Downloading botocore-1.43.6-py3-none-any.whl (15.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.0/15.0 MB 144.1 MB/s  0:00:00
+Using cached jmespath-1.1.0-py3-none-any.whl (20 kB)
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading s3transfer-0.17.0-py3-none-any.whl (86 kB)
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading cached_path-1.8.10-py3-none-any.whl (37 kB)
+Downloading google_cloud_storage-3.10.1-py3-none-any.whl (324 kB)
+Downloading google_api_core-2.30.3-py3-none-any.whl (173 kB)
+Downloading google_auth-2.52.0-py3-none-any.whl (245 kB)
+Downloading google_cloud_core-2.6.0-py3-none-any.whl (29 kB)
+Downloading google_crc32c-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (33 kB)
+Downloading google_resumable_media-2.9.0-py3-none-any.whl (81 kB)
+Downloading googleapis_common_protos-1.75.0-py3-none-any.whl (300 kB)
+Downloading proto_plus-1.28.0-py3-none-any.whl (50 kB)
+Downloading rich-13.9.4-py3-none-any.whl (242 kB)
+Downloading cryptography-48.0.0-cp311-abi3-manylinux_2_34_x86_64.whl (4.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 107.6 MB/s  0:00:00
+Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+Downloading pyasn1-0.6.3-py3-none-any.whl (83 kB)
+Downloading cachetools-7.1.1-py3-none-any.whl (16 kB)
+Downloading cbor2-6.0.1-cp311-cp311-manylinux_2_28_x86_64.whl (458 kB)
+Using cached cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+Downloading cupy_cuda12x-14.0.1-cp311-cp311-manylinux2014_x86_64.whl (135.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.1/135.1 MB 145.9 MB/s  0:00:00
+Using cached dill-0.4.1-py3-none-any.whl (120 kB)
+Using cached einops-0.8.2-py3-none-any.whl (65 kB)
+Downloading ftfy-6.3.1-py3-none-any.whl (44 kB)
+Downloading lingua_language_detector-2.1.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (96.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.2/96.2 MB 113.8 MB/s  0:00:00
+Using cached loguru-0.7.3-py3-none-any.whl (61 kB)
+Downloading markdown2-2.5.5-py3-none-any.whl (56 kB)
+Downloading markdownify-1.2.2-py3-none-any.whl (15 kB)
+Downloading beautifulsoup4-4.14.3-py3-none-any.whl (107 kB)
+Downloading soupsieve-2.8.3-py3-none-any.whl (37 kB)
+Downloading msgspec-0.21.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (219 kB)
+Using cached ninja-1.13.0-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (180 kB)
+Using cached nvidia_ml_py-13.595.45-py3-none-any.whl (51 kB)
+Downloading orjson-3.11.9-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (133 kB)
+Using cached partial_json_parser-0.2.1.1.post7-py3-none-any.whl (10 kB)
+Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+Using cached py_cpuinfo-9.0.0-py3-none-any.whl (22 kB)
+Downloading pybase64-1.4.3-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (71 kB)
+Using cached pycparser-3.0-py3-none-any.whl (48 kB)
+Downloading pypdfium2-5.8.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.7/3.7 MB 78.0 MB/s  0:00:00
+Using cached python_json_logger-4.1.0-py3-none-any.whl (15 kB)
+Downloading scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 166.5 MB/s  0:00:00
+Downloading sentencepiece-0.2.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (1.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 46.7 MB/s  0:00:00
+Downloading setproctitle-1.3.7-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (32 kB)
+Downloading smart_open-7.6.0-py3-none-any.whl (64 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Using cached tabulate-0.10.0-py3-none-any.whl (39 kB)
+Downloading wcwidth-0.7.0-py3-none-any.whl (110 kB)
+Downloading webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Downloading wrapt-2.1.2-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (114 kB)
+Downloading zstandard-0.25.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.6/5.6 MB 84.5 MB/s  0:00:00
+Installing collected packages: webencodings, supervisor, py-cpuinfo, nvidia-ml-py, nvidia-cusparselt-cu12, mpmath, zstandard, wrapt, websockets, wcwidth, uvloop, urllib3, typing_extensions, triton, tqdm, tabulate, sympy, soupsieve, sniffio, six, shellingham, setproctitle, sentencepiece, safetensors, rpds-py, rignore, regex, pyzmq, pyyaml, python-multipart, python-json-logger, python-dotenv, pypdfium2, pypdf, pygments, pycparser, pycountry, pybase64, pyasn1, psutil, protobuf, propcache, prometheus_client, Pillow, partial-json-parser, outlines_core, orjson, nvidia-nvtx-cu12, nvidia-nvshmem-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufile-cu12, nvidia-cudnn-frontend, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, numpy, ninja, networkx, multidict, msgspec, msgpack, mdurl, MarkupSafe, markdown2, loguru, llvmlite, llguidance, lingua-language-detector, lark, jmespath, jiter, interegular, idna, httptools, hf-xet, h11, google-crc32c, fsspec, frozenlist, filelock, fastar, einops, docstring-parser, dnspython, distro, diskcache, dill, cuda-pathfinder, cloudpickle, click, charset_normalizer, certifi, cbor2, cachetools, bleach, attrs, astor, annotated-types, annotated-doc, aiohappyeyeballs, yarl, uvicorn, typing-inspection, smart_open, sentry-sdk, scipy, requests, referencing, python-dateutil, pydantic-core, pyasn1-modules, proto-plus, opencv-python-headless, nvidia-cusparse-cu12, nvidia-cufft-cu12, nvidia-cudnn-cu12, numba, markdown-it-py, jinja2, httpcore, googleapis-common-protos, google-resumable-media, ftfy, email-validator, depyf, cupy-cuda12x, cuda-bindings, cffi, blake3, beautifulsoup4, apache-tvm-ffi, anyio, aiosignal, watchfiles, tiktoken, starlette, rich, pydantic, nvidia-cusolver-cu12, markdownify, jsonschema-specifications, huggingface-hub, httpx, gguf, cuda-python, cryptography, botocore, aiohttp, typer, torch, tokenizers, s3transfer, rich-toolkit, pydantic-settings, pydantic-extra-types, prometheus-fastapi-instrumentator, openai-harmony, openai, nvidia-cutlass-dsl-libs-base, lm-format-enforcer, jsonschema, google-auth, fastapi, anthropic, xformers, transformers, torchvision, torchaudio, ray, nvidia-cutlass-dsl, model-hosting-container-standards, google-api-core, fastapi-cloud-cli, fastapi-cli, boto3, xgrammar, mistral_common, google-cloud-core, flashinfer-python, compressed-tensors, google-cloud-storage, cached-path, vllm, olmocr
+Terminated
+EXIT=143
