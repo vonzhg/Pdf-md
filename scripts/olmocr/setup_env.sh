@@ -10,7 +10,7 @@
 #   srun --account=bepc-delta-gpu --partition=gpuA100x4-interactive \
 #        --nodes=1 --gpus-per-node=1 --cpus-per-task=8 --mem=32g \
 #        --time=01:30:00 --pty bash
-#   bash /u/zfeng2/PDF-MD/setup_olmocr_env_delta.sh
+#   bash /u/zfeng2/Github/PDF-MD/setup_olmocr_env_delta.sh
 #
 # After install, the env is reused by run_olmocr_delta_interactive.sh.
 # ============================================================
@@ -89,4 +89,4 @@ PY
 
 echo ""
 echo "=== Setup done ==="
-echo "Next: bash /u/zfeng2/PDF-MD/run_olmocr_delta_interactive.sh"
+echo "Next: bash /u/zfeng2/Github/PDF-MD/run_olmocr_delta_interactive.sh"

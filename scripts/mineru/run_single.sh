@@ -14,16 +14,16 @@
 #   sbatch --account=bepc-delta-gpu --partition=gpuA100x4-interactive \
 #          --nodes=1 --gpus-per-node=1 --cpus-per-task=8 --mem=32g \
 #          --time=00:45:00 \
-#          --output=/u/zfeng2/PDF-MD/logs/mineru/sbatch_single.log \
+#          --output=/u/zfeng2/Github/PDF-MD/logs/mineru/sbatch_single.log \
 #          --job-name=mineru_single \
-#          /u/zfeng2/PDF-MD/scripts/mineru/run_single.sh
+#          /u/zfeng2/Github/PDF-MD/scripts/mineru/run_single.sh
 # ============================================================
 
 set -euo pipefail
 
 # Hardcoded project root — sbatch copies scripts into /var/spool/slurmd/...,
 # breaking BASH_SOURCE-based derivation. Override with PROJECT_ROOT=... if needed.
-PROJECT_ROOT="${PROJECT_ROOT:-/u/zfeng2/PDF-MD}"
+PROJECT_ROOT="${PROJECT_ROOT:-/u/zfeng2/Github/PDF-MD}"
 PDF="${1:-$PROJECT_ROOT/input/zhang_2025.pdf}"
 OUTPUT_DIR="${2:-$PROJECT_ROOT/output/mineru}"
 

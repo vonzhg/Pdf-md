@@ -240,4 +240,4 @@ cuda available: True
 cuda device: NVIDIA A100-SXM4-40GB
 
 === Setup done ===
-Next: bash /u/zfeng2/PDF-MD/run_olmocr_delta_interactive.sh
+Next: bash /u/zfeng2/Github/PDF-MD/run_olmocr_delta_interactive.sh

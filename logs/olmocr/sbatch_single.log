@@ -3,14 +3,14 @@ Node:      gpua079.delta.ncsa.illinois.edu
 Python:    /projects/bepc/zfeng2/envs/olmocr_env/bin/python
 Torch: 2.9.0+cu128, CUDA: True
 NVIDIA A100-SXM4-40GB, 40960 MiB
-PDF:       /u/zfeng2/PDF-MD/olmocr_test/single_pdf/LI Bo.pdf
-Workspace: /u/zfeng2/PDF-MD/olmocr_test/workspace_single
+PDF:       /u/zfeng2/Github/PDF-MD/olmocr_test/single_pdf/LI Bo.pdf
+Workspace: /u/zfeng2/Github/PDF-MD/olmocr_test/workspace_single
 HF_HOME:   /projects/bepc/zfeng2/hf_cache
 
 2026-05-08 20:33:31,406 - olmocr.pipeline - INFO - If you run out of GPU memory during start-up or get 'KV cache is larger than available memory' errors, retry with lower values, e.g. --gpu_memory_utilization 0.80  --max_model_len 16384
 INFO:olmocr.check:pdftoppm is installed and working.
 2026-05-08 20:33:33,153 - olmocr.pipeline - INFO - Got --pdfs argument, going to add to the work queue
-2026-05-08 20:33:33,171 - olmocr.pipeline - INFO - Loading file at /u/zfeng2/PDF-MD/olmocr_test/single_pdf/LI Bo.pdf as PDF document
+2026-05-08 20:33:33,171 - olmocr.pipeline - INFO - Loading file at /u/zfeng2/Github/PDF-MD/olmocr_test/single_pdf/LI Bo.pdf as PDF document
 2026-05-08 20:33:33,171 - olmocr.pipeline - INFO - Found 1 regular pdf paths and 0 tarballs to add
 Sampling PDFs to calculate optimal length:   0%|          | 0/1 [00:00<?, ?it/s]Sampling PDFs to calculate optimal length: 100%|██████████| 1/1 [00:00<00:00, 62.42it/s]
 2026-05-08 20:33:33,194 - olmocr.pipeline - INFO - Calculated items_per_group: 7 based on average pages per PDF: 66.00

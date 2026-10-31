@@ -1,7 +1,7 @@
 === MinerU Batch Processing ===
 Node:      gpua098.delta.ncsa.illinois.edu
-Input:     /u/zfeng2/PDF-MD/input
-Output:    /u/zfeng2/PDF-MD/output/mineru
+Input:     /u/zfeng2/Github/PDF-MD/input
+Output:    /u/zfeng2/Github/PDF-MD/output/mineru
 Torch: 2.9.0+cu128, CUDA: True
 NVIDIA A100-SXM4-40GB, 40960 MiB
 Total PDFs found: 158

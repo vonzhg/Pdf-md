@@ -31,7 +31,7 @@ PDF-MD/
         └── run_single.sh        Single-PDF smoke test (for debugging)
 ```
 
-All scripts hardcode `PROJECT_ROOT=/u/zfeng2/PDF-MD` (overridable with
+All scripts hardcode `PROJECT_ROOT=/u/zfeng2/Github/PDF-MD` (overridable with
 `PROJECT_ROOT=...` in the environment). See the gotcha about sbatch script
 copying below.
 
@@ -83,7 +83,7 @@ schedules far sooner and is plenty for a single-paper job.
 srun --account=bepc-delta-gpu --partition=gpuA100x4-interactive \
      --nodes=1 --gpus-per-node=1 --cpus-per-task=8 --mem=32g \
      --time=00:30:00 --pty bash
-bash /u/zfeng2/PDF-MD/scripts/marker/run_marker.sh
+bash /u/zfeng2/Github/PDF-MD/scripts/marker/run_marker.sh
 exit
 ```
 
@@ -98,9 +98,9 @@ need a GPU). Takes ~45 min (downloads ~5 GB of wheels, slow on Lustre):
 sbatch --account=bepc-delta-gpu --partition=gpuA100x4 \
        --nodes=1 --gpus-per-node=1 --cpus-per-task=8 --mem=32g \
        --time=03:00:00 \
-       --output=/u/zfeng2/PDF-MD/logs/olmocr/sbatch_setup.log \
+       --output=/u/zfeng2/Github/PDF-MD/logs/olmocr/sbatch_setup.log \
        --job-name=olmocr_install \
-       /u/zfeng2/PDF-MD/scripts/olmocr/setup_env.sh
+       /u/zfeng2/Github/PDF-MD/scripts/olmocr/setup_env.sh
 ```
 
 Wait for `=== Setup done ===` in the log.
@@ -111,9 +111,9 @@ Wait for `=== Setup done ===` in the log.
 sbatch --account=bepc-delta-gpu --partition=gpuA100x4 \
        --nodes=1 --gpus-per-node=1 --cpus-per-task=8 --mem=64g \
        --time=02:00:00 \
-       --output=/u/zfeng2/PDF-MD/logs/olmocr/sbatch_run.log \
+       --output=/u/zfeng2/Github/PDF-MD/logs/olmocr/sbatch_run.log \
        --job-name=olmocr_run \
-       /u/zfeng2/PDF-MD/scripts/olmocr/run.sh
+       /u/zfeng2/Github/PDF-MD/scripts/olmocr/run.sh
 ```
 
 Expected runtime depends on input size. For ~10 typical PDFs (~14 MB total):
@@ -129,9 +129,9 @@ Useful when debugging the install or trying a new model. Defaults to
 sbatch --account=bepc-delta-gpu --partition=gpuA100x4 \
        --nodes=1 --gpus-per-node=1 --cpus-per-task=8 --mem=32g \
        --time=00:45:00 \
-       --output=/u/zfeng2/PDF-MD/logs/olmocr/sbatch_single.log \
+       --output=/u/zfeng2/Github/PDF-MD/logs/olmocr/sbatch_single.log \
        --job-name=olmocr_single \
-       /u/zfeng2/PDF-MD/scripts/olmocr/run_single.sh
+       /u/zfeng2/Github/PDF-MD/scripts/olmocr/run_single.sh
 ```
 
 ### MinerU — one-time install
@@ -145,9 +145,9 @@ stalls. Already done once (2026-05-21); re-run only to rebuild/upgrade:
 sbatch --account=bepc-delta-gpu --partition=gpuA100x4 \
        --nodes=1 --gpus-per-node=1 --cpus-per-task=8 --mem=32g \
        --time=03:00:00 \
-       --output=/u/zfeng2/PDF-MD/logs/mineru/sbatch_setup.log \
+       --output=/u/zfeng2/Github/PDF-MD/logs/mineru/sbatch_setup.log \
        --job-name=mineru_install \
-       /u/zfeng2/PDF-MD/scripts/mineru/setup_env.sh
+       /u/zfeng2/Github/PDF-MD/scripts/mineru/setup_env.sh
 ```
 
 Wait for `=== Setup done ===` in the log.
@@ -158,9 +158,9 @@ Wait for `=== Setup done ===` in the log.
 sbatch --account=bepc-delta-gpu --partition=gpuA100x4-interactive \
        --nodes=1 --gpus-per-node=1 --cpus-per-task=8 --mem=32g \
        --time=01:00:00 \
-       --output=/u/zfeng2/PDF-MD/logs/mineru/sbatch_run.log \
+       --output=/u/zfeng2/Github/PDF-MD/logs/mineru/sbatch_run.log \
        --job-name=mineru_run \
-       /u/zfeng2/PDF-MD/scripts/mineru/run.sh
+       /u/zfeng2/Github/PDF-MD/scripts/mineru/run.sh
 ```
 
 `run.sh` stages all not-yet-converted PDFs and invokes `mineru` **once** over
@@ -176,9 +176,9 @@ Defaults to `input/zhang_2025.pdf`:
 sbatch --account=bepc-delta-gpu --partition=gpuA100x4-interactive \
        --nodes=1 --gpus-per-node=1 --cpus-per-task=8 --mem=32g \
        --time=00:45:00 \
-       --output=/u/zfeng2/PDF-MD/logs/mineru/sbatch_single.log \
+       --output=/u/zfeng2/Github/PDF-MD/logs/mineru/sbatch_single.log \
        --job-name=mineru_single \
-       /u/zfeng2/PDF-MD/scripts/mineru/run_single.sh
+       /u/zfeng2/Github/PDF-MD/scripts/mineru/run_single.sh
 ```
 
 All run scripts skip already-converted work:
@@ -226,7 +226,7 @@ wc -w output/mineru/*/vlm/*.md | tail -5
 Output snapshots are zipped to the project root, dated by day:
 
 ```bash
-cd /u/zfeng2/PDF-MD
+cd /u/zfeng2/Github/PDF-MD
 zip -r mineru_share_$(date +%Y%m%d).zip output/mineru
 ```
 
@@ -242,7 +242,7 @@ Current snapshots:
 ```bash
 squeue -u $USER                                                  # running/pending
 squeue -j <JOBID> --start                                        # estimated start time
-tail -f /u/zfeng2/PDF-MD/logs/mineru/sbatch_run.log              # live output
+tail -f /u/zfeng2/Github/PDF-MD/logs/mineru/sbatch_run.log              # live output
 scancel <JOBID>                                                  # cancel
 ```
 
@@ -305,7 +305,7 @@ scancel <JOBID>                                                  # cancel
 - **sbatch script copying**: SLURM copies the submitted script to
   `/var/spool/slurmd/job<id>/` before executing, so `BASH_SOURCE[0]` and
   `dirname` resolve to that temp path — not the original location. The scripts
-  therefore hardcode `PROJECT_ROOT="${PROJECT_ROOT:-/u/zfeng2/PDF-MD}"` rather
+  therefore hardcode `PROJECT_ROOT="${PROJECT_ROOT:-/u/zfeng2/Github/PDF-MD}"` rather
   than deriving it from script location. Override at runtime if you ever move
   the project, e.g. `PROJECT_ROOT=/elsewhere bash scripts/mineru/run.sh`.
 
@@ -315,16 +315,16 @@ Safe to remove (leftovers from initial debugging / earlier input set):
 
 ```bash
 # Failed-run scratch dir from the original 14-PDF deadlock
-rm -rf /u/zfeng2/PDF-MD/workspace/olmocr/run_failed
+rm -rf /u/zfeng2/Github/PDF-MD/workspace/olmocr/run_failed
 
 # Smoke-test artifacts (LI Bo from the old Chinese-PDF input set)
-rm /u/zfeng2/PDF-MD/output/olmocr/'LI Bo.md'
-rm -rf /u/zfeng2/PDF-MD/workspace/olmocr/single
-rm -rf /u/zfeng2/PDF-MD/workspace/olmocr/single_pdf
+rm /u/zfeng2/Github/PDF-MD/output/olmocr/'LI Bo.md'
+rm -rf /u/zfeng2/Github/PDF-MD/workspace/olmocr/single
+rm -rf /u/zfeng2/Github/PDF-MD/workspace/olmocr/single_pdf
 
 # Old marker per-PDF dirs from the previous Chinese-named input set
 # (only delete if you don't need those marker results anymore)
-rm -rf /u/zfeng2/PDF-MD/output/marker/{'LI Bo',吴璟,孙昂,徐铭梽,李瑶,王自干,盖庆恩,端木昊随,裴建锁,许志伟,谢觐,车翼,高华声,黄炜}
+rm -rf /u/zfeng2/Github/PDF-MD/output/marker/{'LI Bo',吴璟,孙昂,徐铭梽,李瑶,王自干,盖庆恩,端木昊随,裴建锁,许志伟,谢觐,车翼,高华声,黄炜}
 ```
 
 The conda envs (`/projects/bepc/zfeng2/envs/olmocr_env`, `~/.conda/envs/mineru`),

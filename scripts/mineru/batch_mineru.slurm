@@ -6,7 +6,7 @@
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=64g
 #SBATCH --time=12:00:00
-#SBATCH --output=/u/zfeng2/PDF-MD/logs/mineru/batch_run_%j.log
+#SBATCH --output=/u/zfeng2/Github/PDF-MD/logs/mineru/batch_run_%j.log
 #SBATCH --job-name=mineru_batch
 
 # ============================================================
@@ -20,7 +20,7 @@
 
 set -euo pipefail
 
-PROJECT_ROOT="/u/zfeng2/PDF-MD"
+PROJECT_ROOT="/u/zfeng2/Github/PDF-MD"
 INPUT_DIR="$PROJECT_ROOT/input"
 OUTPUT_DIR="$PROJECT_ROOT/output/mineru"
 CONDA_ENV="mineru"

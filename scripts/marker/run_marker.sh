@@ -4,12 +4,12 @@
 #
 # Adapted from run_marker_ncsa.sbatch — no SLURM, runs in the
 # foreground on whatever node you're on (login or compute).
-# Intended to live at /u/zfeng2/PDF-MD/ and operate on:
+# Intended to live at /u/zfeng2/Github/PDF-MD/ and operate on:
 #     input/   → PDFs
 #     output/  → per-PDF subfolders with Markdown + figures
 #
 # Usage:
-#   cd /u/zfeng2/PDF-MD
+#   cd /u/zfeng2/Github/PDF-MD
 #   ./run_marker.sh                   # input/ → output/
 #   ./run_marker.sh <in_dir> <out_dir>
 
@@ -29,7 +29,7 @@ set -euo pipefail
 
 # Hardcoded project root — sbatch copies scripts into /var/spool/slurmd/...,
 # breaking BASH_SOURCE-based derivation. Override with PROJECT_ROOT=... if needed.
-PROJECT_ROOT="${PROJECT_ROOT:-/u/zfeng2/PDF-MD}"
+PROJECT_ROOT="${PROJECT_ROOT:-/u/zfeng2/Github/PDF-MD}"
 INPUT_DIR="${1:-$PROJECT_ROOT/input}"
 OUTPUT_DIR="${2:-$PROJECT_ROOT/output/marker}"
 

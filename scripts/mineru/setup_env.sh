@@ -15,9 +15,9 @@
 #   sbatch --account=bepc-delta-gpu --partition=gpuA100x4 \
 #          --nodes=1 --gpus-per-node=1 --cpus-per-task=8 --mem=32g \
 #          --time=03:00:00 \
-#          --output=/u/zfeng2/PDF-MD/logs/mineru/sbatch_setup.log \
+#          --output=/u/zfeng2/Github/PDF-MD/logs/mineru/sbatch_setup.log \
 #          --job-name=mineru_install \
-#          /u/zfeng2/PDF-MD/scripts/mineru/setup_env.sh
+#          /u/zfeng2/Github/PDF-MD/scripts/mineru/setup_env.sh
 #
 # After install, the env is reused by run.sh / run_single.sh.
 # ============================================================
@@ -77,4 +77,4 @@ PY
 
 echo ""
 echo "=== Setup done ==="
-echo "Next: bash /u/zfeng2/PDF-MD/scripts/mineru/run_single.sh   (smoke test)"
+echo "Next: bash /u/zfeng2/Github/PDF-MD/scripts/mineru/run_single.sh   (smoke test)"

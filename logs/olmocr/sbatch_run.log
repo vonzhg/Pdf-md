@@ -3,25 +3,25 @@ Node:      gpua031.delta.ncsa.illinois.edu
 Python:    /projects/bepc/zfeng2/envs/olmocr_env/bin/python
 Torch: 2.9.0+cu128, CUDA available: True
 NVIDIA A100-SXM4-40GB, 40960 MiB
-Input:     /u/zfeng2/PDF-MD/input
-Workspace: /u/zfeng2/PDF-MD/workspace/olmocr/run
-Output:    /u/zfeng2/PDF-MD/output/olmocr
+Input:     /u/zfeng2/Github/PDF-MD/input
+Workspace: /u/zfeng2/Github/PDF-MD/workspace/olmocr/run
+Output:    /u/zfeng2/Github/PDF-MD/output/olmocr
 HF_HOME:   /projects/bepc/zfeng2/hf_cache
 Papers:    10
 
 2026-05-08 21:24:40,392 - olmocr.pipeline - INFO - If you run out of GPU memory during start-up or get 'KV cache is larger than available memory' errors, retry with lower values, e.g. --gpu_memory_utilization 0.80  --max_model_len 16384
 INFO:olmocr.check:pdftoppm is installed and working.
 2026-05-08 21:24:41,656 - olmocr.pipeline - INFO - Got --pdfs argument, going to add to the work queue
-2026-05-08 21:24:41,667 - olmocr.pipeline - INFO - Loading file at /u/zfeng2/PDF-MD/input/1601_federal_reserve_bank.pdf as PDF document
-2026-05-08 21:24:41,682 - olmocr.pipeline - INFO - Loading file at /u/zfeng2/PDF-MD/input/1949_economie_et_interet.pdf as PDF document
-2026-05-08 21:24:41,689 - olmocr.pipeline - INFO - Loading file at /u/zfeng2/PDF-MD/input/1952_economie_et_interet.pdf as PDF document
-2026-05-08 21:24:41,693 - olmocr.pipeline - INFO - Loading file at /u/zfeng2/PDF-MD/input/1953_community_preference_fields.pdf as PDF document
-2026-05-08 21:24:41,695 - olmocr.pipeline - INFO - Loading file at /u/zfeng2/PDF-MD/input/1953_the_state_of_the_union.pdf as PDF document
-2026-05-08 21:24:41,697 - olmocr.pipeline - INFO - Loading file at /u/zfeng2/PDF-MD/input/1958_a_theory_of_the_consumption_function.pdf as PDF document
-2026-05-08 21:24:41,701 - olmocr.pipeline - INFO - Loading file at /u/zfeng2/PDF-MD/input/1960_welfare_economics_and_existence_of_an_equilibrium_for_a_competitive_economy.pdf as PDF document
-2026-05-08 21:24:41,702 - olmocr.pipeline - INFO - Loading file at /u/zfeng2/PDF-MD/input/1961_the_theory_of_economic_development.pdf as PDF document
-2026-05-08 21:24:41,704 - olmocr.pipeline - INFO - Loading file at /u/zfeng2/PDF-MD/input/1962_the_economic_implications_of_learning_by_doing.pdf as PDF document
-2026-05-08 21:24:41,711 - olmocr.pipeline - INFO - Loading file at /u/zfeng2/PDF-MD/input/1962_walras_existence_theorem_and_brouwer_s_fixed_point_theorem.pdf as PDF document
+2026-05-08 21:24:41,667 - olmocr.pipeline - INFO - Loading file at /u/zfeng2/Github/PDF-MD/input/1601_federal_reserve_bank.pdf as PDF document
+2026-05-08 21:24:41,682 - olmocr.pipeline - INFO - Loading file at /u/zfeng2/Github/PDF-MD/input/1949_economie_et_interet.pdf as PDF document
+2026-05-08 21:24:41,689 - olmocr.pipeline - INFO - Loading file at /u/zfeng2/Github/PDF-MD/input/1952_economie_et_interet.pdf as PDF document
+2026-05-08 21:24:41,693 - olmocr.pipeline - INFO - Loading file at /u/zfeng2/Github/PDF-MD/input/1953_community_preference_fields.pdf as PDF document
+2026-05-08 21:24:41,695 - olmocr.pipeline - INFO - Loading file at /u/zfeng2/Github/PDF-MD/input/1953_the_state_of_the_union.pdf as PDF document
+2026-05-08 21:24:41,697 - olmocr.pipeline - INFO - Loading file at /u/zfeng2/Github/PDF-MD/input/1958_a_theory_of_the_consumption_function.pdf as PDF document
+2026-05-08 21:24:41,701 - olmocr.pipeline - INFO - Loading file at /u/zfeng2/Github/PDF-MD/input/1960_welfare_economics_and_existence_of_an_equilibrium_for_a_competitive_economy.pdf as PDF document
+2026-05-08 21:24:41,702 - olmocr.pipeline - INFO - Loading file at /u/zfeng2/Github/PDF-MD/input/1961_the_theory_of_economic_development.pdf as PDF document
+2026-05-08 21:24:41,704 - olmocr.pipeline - INFO - Loading file at /u/zfeng2/Github/PDF-MD/input/1962_the_economic_implications_of_learning_by_doing.pdf as PDF document
+2026-05-08 21:24:41,711 - olmocr.pipeline - INFO - Loading file at /u/zfeng2/Github/PDF-MD/input/1962_walras_existence_theorem_and_brouwer_s_fixed_point_theorem.pdf as PDF document
 2026-05-08 21:24:41,711 - olmocr.pipeline - INFO - Found 10 regular pdf paths and 0 tarballs to add
 Sampling PDFs to calculate optimal length:   0%|          | 0/10 [00:00<?, ?it/s]Sampling PDFs to calculate optimal length:  80%|████████  | 8/10 [00:00<00:00, 33.07it/s]Sampling PDFs to calculate optimal length: 100%|██████████| 10/10 [00:00<00:00, 38.31it/s]
 2026-05-08 21:24:41,984 - olmocr.pipeline - INFO - Calculated items_per_group: 32 based on average pages per PDF: 15.40
@@ -543,6 +543,6 @@ Worker ID | finished | started
 
 ============================================================
 Done.  Markdown files: 11  Elapsed: 378s
-Workspace: /u/zfeng2/PDF-MD/workspace/olmocr/run
-Output:    /u/zfeng2/PDF-MD/output/olmocr
+Workspace: /u/zfeng2/Github/PDF-MD/workspace/olmocr/run
+Output:    /u/zfeng2/Github/PDF-MD/output/olmocr
 ============================================================

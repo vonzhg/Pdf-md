@@ -9,16 +9,16 @@
 #   sbatch --account=bepc-delta-gpu --partition=gpuA100x4 \
 #          --nodes=1 --gpus-per-node=1 --cpus-per-task=8 --mem=32g \
 #          --time=00:45:00 \
-#          --output=/u/zfeng2/PDF-MD/olmocr_test/sbatch_single.log \
+#          --output=/u/zfeng2/Github/PDF-MD/olmocr_test/sbatch_single.log \
 #          --job-name=olmocr_single \
-#          /u/zfeng2/PDF-MD/run_olmocr_single_pdf.sh
+#          /u/zfeng2/Github/PDF-MD/run_olmocr_single_pdf.sh
 # ============================================================
 
 set -euo pipefail
 
 # Hardcoded project root — sbatch copies scripts into /var/spool/slurmd/...,
 # breaking BASH_SOURCE-based derivation. Override with PROJECT_ROOT=... if needed.
-PROJECT_ROOT="${PROJECT_ROOT:-/u/zfeng2/PDF-MD}"
+PROJECT_ROOT="${PROJECT_ROOT:-/u/zfeng2/Github/PDF-MD}"
 
 PDF="${1:-$PROJECT_ROOT/workspace/olmocr/single_pdf/LI Bo.pdf}"
 WORKSPACE="${2:-$PROJECT_ROOT/workspace/olmocr/single}"

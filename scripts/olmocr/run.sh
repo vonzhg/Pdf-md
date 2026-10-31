@@ -4,13 +4,13 @@
 #
 # Mirrors run_marker_delta_interactive.sh but invokes AllenAI
 # olmOCR (https://github.com/allenai/olmocr) instead of marker.
-# Intended to live at /u/zfeng2/PDF-MD/ and operate on:
+# Intended to live at /u/zfeng2/Github/PDF-MD/ and operate on:
 #     input/                        -> PDFs
 #     olmocr_test/workspace/        -> olmocr workspace + intermediate state
 #     olmocr_test/output/           -> flattened markdown (one .md per PDF)
 #
 # Usage:
-#   cd /u/zfeng2/PDF-MD
+#   cd /u/zfeng2/Github/PDF-MD
 #   bash run_olmocr_delta_interactive.sh                  # input/ -> olmocr_test/output/
 #   bash run_olmocr_delta_interactive.sh <in> <work> <out>
 #
@@ -31,7 +31,7 @@ set -euo pipefail
 # Hardcoded project root — sbatch copies the submitted script into
 # /var/spool/slurmd/job<id>/ before executing, so deriving PROJECT_ROOT from
 # BASH_SOURCE[0] breaks under sbatch. Override with PROJECT_ROOT=... if needed.
-PROJECT_ROOT="${PROJECT_ROOT:-/u/zfeng2/PDF-MD}"
+PROJECT_ROOT="${PROJECT_ROOT:-/u/zfeng2/Github/PDF-MD}"
 INPUT_DIR="${1:-$PROJECT_ROOT/input}"
 WORKSPACE="${2:-$PROJECT_ROOT/workspace/olmocr/run}"
 OUTPUT_DIR="${3:-$PROJECT_ROOT/output/olmocr}"
@@ -88,7 +88,7 @@ END_TIME=$(date +%s)
 ELAPSED=$((END_TIME - START_TIME))
 
 # Flatten markdown into OUTPUT_DIR. olmocr nests outputs under the input PDF's
-# absolute path (e.g. workspace/markdown/u/zfeng2/PDF-MD/input/<name>.md), so
+# absolute path (e.g. workspace/markdown/u/zfeng2/Github/PDF-MD/input/<name>.md), so
 # walk the tree and copy each .md to OUTPUT_DIR/<basename>.
 if [ -d "$WORKSPACE/markdown" ]; then
     find "$WORKSPACE/markdown" -type f -name '*.md' -exec cp -f -- {} "$OUTPUT_DIR"/ \;
