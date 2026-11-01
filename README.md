@@ -75,8 +75,8 @@ copying below.
   is a symlink to it since 2026-11-01). The run scripts read it offline with
   `MINERU_MODEL_SOURCE=huggingface` and `HF_HUB_OFFLINE=1`. `~/mineru.json` no longer
   exists, so the old `MINERU_MODEL_SOURCE=local` setting fails.
-- The olmOCR weights (`allenai/olmOCR-2-7B-1025-FP8`, ~9.5 GB) are still in that cache;
-  delete `hub/models--allenai--olmOCR-2-7B-1025-FP8` if olmOCR will not come back.
+- The olmOCR weights (`allenai/olmOCR-2-7B-1025-FP8`, ~9.5 GB) were deleted from that
+  cache on 2026-11-01.
 
 ## Running on Delta
 
