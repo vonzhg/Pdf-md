@@ -26,9 +26,11 @@ OUTPUT_DIR="$PROJECT_ROOT/output/mineru"
 CONDA_ENV="mineru"
 BACKEND="vlm-auto-engine"
 
-# Offline mode for model weights
-export MINERU_MODEL_SOURCE="local"
+# Model weights: read from the Hugging Face cache, offline (compute nodes have no network).
+# "local" would need ~/mineru.json, which no longer exists; same convention as Econ-RAG.
+export MINERU_MODEL_SOURCE="huggingface"
 export HF_HUB_OFFLINE="1"
+export HF_HOME="/projects/bepc/zfeng2/hf_cache"
 export LC_ALL="en_US.UTF-8"
 export PYTHONUNBUFFERED=1
 

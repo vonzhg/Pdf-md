@@ -35,9 +35,11 @@ OUTPUT_DIR="${2:-$PROJECT_ROOT/output/mineru}"
 CONDA_ENV="${CONDA_ENV:-mineru}"
 # Backend: vlm-auto-engine picks the vLLM engine for fast local GPU inference.
 BACKEND="${MINERU_BACKEND:-vlm-auto-engine}"
-# Use the model weights pre-downloaded by setup_env.sh (offline on compute nodes).
-export MINERU_MODEL_SOURCE="${MINERU_MODEL_SOURCE:-local}"
+# Model weights: read from the Hugging Face cache, offline (compute nodes have no network).
+# "local" would need ~/mineru.json, which no longer exists; same convention as Econ-RAG.
+export MINERU_MODEL_SOURCE="${MINERU_MODEL_SOURCE:-huggingface}"
 export HF_HUB_OFFLINE="${HF_HUB_OFFLINE:-1}"
+export HF_HOME="${HF_HOME:-/projects/bepc/zfeng2/hf_cache}"
 export LC_ALL="${LC_ALL:-en_US.UTF-8}"
 
 # Activate conda (Delta-style)

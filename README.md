@@ -1,7 +1,10 @@
 # PDF-MD
 
-PDF-to-Markdown extraction on the NCSA Delta HPC cluster, using three converters
-side-by-side for comparison: **marker-pdf**, **AllenAI olmOCR**, and **MinerU**.
+PDF-to-Markdown extraction on the NCSA Delta HPC cluster. Three converters were
+compared side by side: **marker-pdf**, **AllenAI olmOCR**, and **MinerU**.
+**MinerU is the converter in use. olmOCR was retired on 2026-11-01**: its env is set
+for deletion and its jobs were replaced by the MinerU equivalents (see "olmOCR (retired)"
+below). Its May 2026 outputs and logs are kept as a record.
 
 ## Layout
 
@@ -11,23 +14,20 @@ PDF-MD/
 ├── input/                       Source PDFs (shared by all converters)
 ├── output/
 │   ├── marker/                  marker-pdf results: <name>/<name>.md (+ figures)
-│   ├── olmocr/                  olmOCR results: flat <name>.md
+│   ├── olmocr/                  olmOCR results (retired tool; kept in PDF-MD-data-archive.zip)
 │   └── mineru/                  MinerU results: <name>/vlm/<name>.md (+ images, JSON, layout.pdf)
 ├── workspace/
-│   └── olmocr/                  olmOCR scratch (intermediate state, can be wiped)
+│   └── olmocr/                  olmOCR run state from May 2026 (record only)
 ├── logs/
-│   ├── olmocr/                  setup + sbatch logs
+│   ├── olmocr/                  olmOCR setup + sbatch logs (record only)
 │   └── mineru/                  install + model-download + sbatch logs
 └── scripts/
     ├── marker/
     │   └── run_marker.sh        Run marker on input/ → output/marker/
-    ├── olmocr/
-    │   ├── setup_env.sh         One-time conda env install (runs idempotently)
-    │   ├── run.sh               Run olmOCR on input/ → output/olmocr/
-    │   └── run_single.sh        Single-PDF smoke test (for debugging)
     └── mineru/
         ├── setup_env.sh         One-time conda env install (runs idempotently)
         ├── run.sh               Run MinerU on input/ → output/mineru/
+        ├── batch_mineru.slurm   Same as run.sh as a 12 h sbatch job, for large batches
         └── run_single.sh        Single-PDF smoke test (for debugging)
 ```
 
@@ -37,37 +37,46 @@ copying below.
 
 ## Status
 
-- **olmOCR install**: verified on 2026-05-08, env at `/projects/bepc/zfeng2/envs/olmocr_env`.
-- **olmOCR last batch run**: job 18136522, 10 historic econ papers, 7:03
-  wall time (378 s of inference after vLLM warmup), all 10 `.md` files written
-  to `output/olmocr/`. Throughput ~188 words/sec end-to-end on one A100.
+- **olmOCR retired 2026-11-01**: env `/projects/bepc/zfeng2/envs/olmocr_env` set for
+  deletion (package list kept in `~/archive/env-specs/`), scripts removed (last present in
+  commit `e7c6bc9`). Its last batch run (job 18136522, 2026-05-08) converted 10
+  historic econ papers in 7:03 wall time on one A100; those 10 `.md` files are in
+  `output/olmocr/` inside the data archive. Their source PDFs are no longer on
+  Delta, so they cannot be re-run through MinerU here.
 - **marker**: existing pipeline, was previously run on 14 Chinese-named PDFs
   (now removed from `input/`); old per-PDF dirs still present in
   `output/marker/` — see Cleanup below.
-- **MinerU install**: verified on 2026-05-21, conda env `mineru`
-  (`~/.conda/envs/mineru`), MinerU 3.1.15 + vLLM 0.11.2 + torch 2.9.0+cu128.
+- **MinerU install**: verified on 2026-05-21, conda env `mineru`, MinerU 3.1.15 +
+  vLLM 0.11.2 + torch 2.9.0+cu128. Since 2026-10-31 the env lives in
+  `/projects/bepc/zfeng2/envs/mineru`; `~/.conda/envs/mineru` is a symlink to it.
 - **MinerU smoke test**: job 18385366, `input/zhang_2025.pdf` (54-page econ
   paper), `gpuA100x4-interactive`, one A100-40GB. `time mineru` = 2 m 59 s,
   of which ~1 m 50 s is vLLM engine startup + model load + CUDA-graph capture
   and only **44 s is VLM inference for all 54 pages** (~1.2 pages/s). Output:
   22,195-word `zhang_2025.md`, 90 extracted images, an annotated `layout.pdf`,
   and JSON sidecars — see `logs/mineru/sbatch_single.log`.
+- **MinerU re-check 2026-11-01**, after the env move and the switch to offline
+  cache lookup: job 23394720 ran `scripts/mineru/run_single.sh` on the former
+  olmOCR smoke-test PDF in `workspace/olmocr/single_pdf/` on one A100
+  (`gpuA100x4-interactive`): 66 pages in 8 m 31 s, exit 0, 4,265 words of
+  Markdown versus 3,890 from olmOCR. Output and job log are in `output/mineru/`
+  (local only, not in git).
 
 ## Environments
 
 | Converter | Conda env | Python | Notes |
 |---|---|---|---|
 | marker  | `marker` (pre-existing)                  | (existing) | Already installed prior to this project |
-| olmOCR  | `/projects/bepc/zfeng2/envs/olmocr_env`  | 3.11       | Created by `scripts/olmocr/setup_env.sh` |
-| MinerU  | `mineru` (named env, `~/.conda/envs/mineru`) | 3.11   | Created by `scripts/mineru/setup_env.sh`; MinerU 3.1.15 + vLLM |
+| olmOCR  | retired 2026-11-01; env set for deletion | 3.11       | Package list: `~/archive/env-specs/olmocr_env.*.txt` |
+| MinerU  | `mineru` (`/projects/bepc/zfeng2/envs/mineru`, symlinked as `~/.conda/envs/mineru`) | 3.11 | Created by `scripts/mineru/setup_env.sh`; MinerU 3.1.15 + vLLM |
 
-- The olmOCR model (`allenai/olmOCR-2-7B-1025-FP8`, ~9.5 GB) is downloaded on
-  first run into `HF_HOME=/projects/bepc/zfeng2/hf_cache` and reused thereafter.
-- The MinerU VLM model (`opendatalab/MinerU2.5-Pro-2604-1.2B`, ~2.2 GB) is
-  pre-downloaded by `scripts/mineru/setup_env.sh` into `~/.cache/huggingface`;
-  `~/mineru.json` records the local path so runs work offline. Note the MinerU
-  env lives in **home** (`~/.conda/envs/`), unlike olmOCR's project-space env —
-  see the gotcha below.
+- The MinerU VLM model (`opendatalab/MinerU2.5-Pro-2604-1.2B`, ~2.2 GB) lives in the
+  Hugging Face cache `HF_HOME=/projects/bepc/zfeng2/hf_cache` (`~/.cache/huggingface`
+  is a symlink to it since 2026-11-01). The run scripts read it offline with
+  `MINERU_MODEL_SOURCE=huggingface` and `HF_HUB_OFFLINE=1`. `~/mineru.json` no longer
+  exists, so the old `MINERU_MODEL_SOURCE=local` setting fails.
+- The olmOCR weights (`allenai/olmOCR-2-7B-1025-FP8`, ~9.5 GB) are still in that cache;
+  delete `hub/models--allenai--olmOCR-2-7B-1025-FP8` if olmOCR will not come back.
 
 ## Running on Delta
 
@@ -89,50 +98,17 @@ exit
 
 Writes `output/marker/<name>/<name>.md` per PDF, plus extracted figures.
 
-### olmOCR — one-time install
+### olmOCR (retired 2026-11-01): use MinerU instead
 
-Run once on a CPU or GPU node (a GPU node is fine; the install itself does not
-need a GPU). Takes ~45 min (downloads ~5 GB of wheels, slow on Lustre):
+| Former olmOCR job | MinerU equivalent |
+|---|---|
+| `scripts/olmocr/setup_env.sh` (install) | `scripts/mineru/setup_env.sh` (already installed; re-run only to rebuild) |
+| `scripts/olmocr/run.sh` (all PDFs in `input/`) | `scripts/mineru/run.sh`, or `sbatch scripts/mineru/batch_mineru.slurm` for long batches |
+| `scripts/olmocr/run_single.sh` (one PDF) | `scripts/mineru/run_single.sh <pdf>` |
 
-```bash
-sbatch --account=bepc-delta-gpu --partition=gpuA100x4 \
-       --nodes=1 --gpus-per-node=1 --cpus-per-task=8 --mem=32g \
-       --time=03:00:00 \
-       --output=/u/zfeng2/Github/PDF-MD/logs/olmocr/sbatch_setup.log \
-       --job-name=olmocr_install \
-       /u/zfeng2/Github/PDF-MD/scripts/olmocr/setup_env.sh
-```
-
-Wait for `=== Setup done ===` in the log.
-
-### olmOCR — full batch (all PDFs in `input/`)
-
-```bash
-sbatch --account=bepc-delta-gpu --partition=gpuA100x4 \
-       --nodes=1 --gpus-per-node=1 --cpus-per-task=8 --mem=64g \
-       --time=02:00:00 \
-       --output=/u/zfeng2/Github/PDF-MD/logs/olmocr/sbatch_run.log \
-       --job-name=olmocr_run \
-       /u/zfeng2/Github/PDF-MD/scripts/olmocr/run.sh
-```
-
-Expected runtime depends on input size. For ~10 typical PDFs (~14 MB total):
-~7 min wall time (~6 min vLLM startup + cache warm + ~1 min inference). For
-~14 longer PDFs: ~25–40 min. Writes `output/olmocr/<name>.md`.
-
-### olmOCR — single-PDF smoke test
-
-Useful when debugging the install or trying a new model. Defaults to
-`workspace/olmocr/single_pdf/LI Bo.pdf`:
-
-```bash
-sbatch --account=bepc-delta-gpu --partition=gpuA100x4 \
-       --nodes=1 --gpus-per-node=1 --cpus-per-task=8 --mem=32g \
-       --time=00:45:00 \
-       --output=/u/zfeng2/Github/PDF-MD/logs/olmocr/sbatch_single.log \
-       --job-name=olmocr_single \
-       /u/zfeng2/Github/PDF-MD/scripts/olmocr/run_single.sh
-```
+olmOCR wrote a flat `output/olmocr/<name>.md`; MinerU writes
+`output/mineru/<name>/vlm/<name>.md`. The old scripts remain readable with
+`git show e7c6bc9:scripts/olmocr/run.sh`.
 
 ### MinerU — one-time install
 
@@ -183,10 +159,6 @@ sbatch --account=bepc-delta-gpu --partition=gpuA100x4-interactive \
 
 All run scripts skip already-converted work:
 - **marker**: skips a PDF if `output/marker/<name>/<name>.md` exists.
-- **olmocr**: skips a PDF whose hash has a `done_flags/` entry under
-  `workspace/olmocr/run/`. Wiping that workspace forces a full re-OCR (deleting
-  files in `output/olmocr/` alone does **not** trigger reprocessing — olmocr
-  doesn't read its own output).
 - **mineru**: skips a PDF if its `output/mineru/<name>/` folder exists. Delete
   that folder to force re-extraction.
 
@@ -211,10 +183,6 @@ For each PDF, MinerU (VLM backend) writes a `<name>/vlm/` folder:
 # marker
 ls output/marker/ | wc -l
 wc -w output/marker/*/*.md | tail -5
-
-# olmOCR
-ls output/olmocr/*.md | wc -l
-wc -w output/olmocr/*.md | tail -5
 
 # MinerU
 ls output/mineru/ | wc -l
@@ -248,22 +216,11 @@ scancel <JOBID>                                                  # cancel
 
 ## Notes / gotchas
 
-### olmOCR
+### olmOCR (retired)
 
-- **`--max_concurrent_requests 64`** is set in `scripts/olmocr/run.sh`. The
-  upstream default is 1600, which deadlocks vLLM on a single A100 (engine
-  silently stalls while the API server stays bound) and also caused SLURM
-  OOM-kills (~600 page images held in host RAM at once). Do not raise this
-  above ~128 on a 40 GB A100.
-- **`--mem=64g`** for the run sbatch. 32 GB was not enough at high concurrency;
-  64 GB has plenty of headroom even if you raise `--max_concurrent_requests`.
-- **FP8 model on A100**: the default model (`allenai/olmOCR-2-7B-1025-FP8`)
-  is FP8-quantized. A100 lacks native FP8, so vLLM falls back to the Marlin
-  kernel — correct results, ~30 % slower than on H100/H200. A non-FP8 variant
-  can be selected with `--model allenai/olmOCR-7B-0225-preview` if needed.
-- **olmocr output nesting**: olmOCR writes
-  `workspace/markdown/<absolute-input-path>.md`. `scripts/olmocr/run.sh`
-  flattens this with `find ... -exec cp` so `output/olmocr/` ends up flat.
+Tuning notes for the retired pipeline (`--max_concurrent_requests 64` against the
+vLLM deadlock, `--mem=64g`, the FP8 model on A100, flattening of the nested
+markdown output) are in the README as of commit `e7c6bc9`: `git show e7c6bc9:README.md`.
 
 ### MinerU
 
@@ -274,11 +231,12 @@ scancel <JOBID>                                                  # cancel
   server), and `hybrid-auto-engine` / `hybrid-http-client` (v3's new default,
   "next-generation" accuracy — combines pipeline + VLM, needs the pipeline
   models too: `mineru-models-download -m all`).
-- **Offline model use**: the run scripts export `MINERU_MODEL_SOURCE=local` and
-  `HF_HUB_OFFLINE=1` so compute nodes never reach the network. `~/mineru.json`
-  records the local model path written by `setup_env.sh`. To re-download or
-  switch sources, re-run `setup_env.sh` (uses `-s huggingface` by default;
-  `MINERU_MODEL_DL_SOURCE=modelscope` switches to ModelScope).
+- **Offline model use**: the run scripts export `MINERU_MODEL_SOURCE=huggingface`,
+  `HF_HUB_OFFLINE=1` and `HF_HOME=/projects/bepc/zfeng2/hf_cache`, so compute nodes
+  read the weights from the cache and never reach the network. Until 2026-11-01 they
+  used `MINERU_MODEL_SOURCE=local`, which depends on `~/mineru.json`; that file is
+  gone. To re-download or switch sources, re-run `setup_env.sh` (uses
+  `-s huggingface` by default; `MINERU_MODEL_DL_SOURCE=modelscope` switches to ModelScope).
 - **Single vLLM load per batch**: `run.sh` symlinks all pending PDFs into a
   temp dir and calls `mineru` once. Invoking `mineru` per file would reload the
   ~2 GB model and re-pay the ~2 min vLLM startup for every PDF.
@@ -288,12 +246,10 @@ scancel <JOBID>                                                  # cancel
   unaffected.
 - **GPU sizing**: the VLM model is only 1.2 B params; a 40 GB A100 (or A40) is
   more than enough. `--mem=32g` host RAM is sufficient.
-- **Env location**: the `mineru` conda env is a *named* env in home
-  (`~/.conda/envs/mineru`), unlike olmOCR's path-based env under
-  `/projects/bepc/`. Home quota is finite (~100 GB) — `du -sh ~/.conda/envs/mineru`
-  to check. To move it to project space, recreate with
-  `CONDA_ENV=/projects/bepc/zfeng2/envs/mineru_env bash scripts/mineru/setup_env.sh`
-  (conda envs cannot be safely relocated by `mv`).
+- **Env location**: since 2026-10-31 the `mineru` env lives in project space,
+  `/projects/bepc/zfeng2/envs/mineru` (copied with rsync, not `mv`), and
+  `~/.conda/envs/mineru` is a symlink to it, so `conda activate mineru` and
+  `/u/zfeng2/.conda/envs/mineru/bin/python` both keep working.
 
 ### General
 
@@ -327,13 +283,13 @@ rm -rf /u/zfeng2/Github/PDF-MD/workspace/olmocr/single_pdf
 rm -rf /u/zfeng2/Github/PDF-MD/output/marker/{'LI Bo',吴璟,孙昂,徐铭梽,李瑶,王自干,盖庆恩,端木昊随,裴建锁,许志伟,谢觐,车翼,高华声,黄炜}
 ```
 
-The conda envs (`/projects/bepc/zfeng2/envs/olmocr_env`, `~/.conda/envs/mineru`),
-HF caches (`/projects/bepc/zfeng2/hf_cache`, `~/.cache/huggingface`), `input/`,
-and current `output/` should be kept.
+Keep the `mineru` env, the HF cache (`/projects/bepc/zfeng2/hf_cache`, also reached
+as `~/.cache/huggingface`; MinerU reads its weights there offline), `input/`, and
+current `output/`.
 
 ## Logs
 
-### olmOCR install/setup session (2026-05-08)
+### olmOCR install/setup session (2026-05-08; tool retired 2026-11-01, logs kept as a record)
 
 `logs/olmocr/` contains chronological logs of how the env got installed and how
 the pipeline was tuned — useful as reference if you ever need to rebuild from

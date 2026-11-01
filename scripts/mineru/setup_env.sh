@@ -25,6 +25,8 @@
 set -euo pipefail
 
 CONDA_ENV="${CONDA_ENV:-mineru}"
+# Weights go to the project-space HF cache (~/.cache/huggingface is a symlink to it).
+export HF_HOME="${HF_HOME:-/projects/bepc/zfeng2/hf_cache}"
 # Source to pull model weights from: huggingface (default) or modelscope.
 MODEL_SOURCE="${MINERU_MODEL_DL_SOURCE:-huggingface}"
 
